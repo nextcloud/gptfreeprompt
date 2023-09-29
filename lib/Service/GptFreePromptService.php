@@ -5,7 +5,6 @@
 namespace OCA\GptFreePrompt\Service;
 
 use OCP\IConfig;
-use OCP\IL10N;
 use Psr\Log\LoggerInterface;
 use OCP\TextProcessing\IManager;
 use OCP\TextProcessing\FreePromptTaskType;
@@ -16,7 +15,6 @@ class GptFreePromptService
 {
     public function __construct(
         private IConfig $config,
-        private IL10N $l10n,
         private LoggerInterface $logger,
         private IManager $textProcessingManager,
         private ?string $userId

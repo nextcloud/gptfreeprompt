@@ -31,11 +31,9 @@ class GptFreePromptReferenceListener implements IEventListener {
 
 	public function handle(Event $event): void {
 
-		$this->logger->warning('gptfreeprompt LISTENING!!!!');
 		if (!$event instanceof RenderReferenceEvent) {
 			return;
-		}
-		
+		}		
 		
 		$pickerEnabled = $this->config->getAppValue(Application::APP_ID, 'picker_enabled', '1') === '1';
 		
