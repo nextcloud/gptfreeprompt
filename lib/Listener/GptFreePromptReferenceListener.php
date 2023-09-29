@@ -11,6 +11,7 @@ use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\IConfig;
 use OCP\Util;
+use OCP\IGroupManager;
 
 #DEBUG: import logger
 use Psr\Log\LoggerInterface;
@@ -22,33 +23,32 @@ class GptFreePromptReferenceListener implements IEventListener {
 		private IConfig $config,
 		private IInitialState $initialState,
 		private ?string $userId,
-		private LoggerInterface $logger
+		private LoggerInterface $logger,
+		private IGroupManager $iGroupManager,
 	) {
 		
 	}
 
 	public function handle(Event $event): void {
 
+		$this->logger->warning('gptfreeprompt LISTENING!!!!');
 		if (!$event instanceof RenderReferenceEvent) {
 			return;
 		}
 		
-		$this->logger->warning('gptfreeprompt Logging!!!');
-		#$pickerEnabled = $this->config->getAppValue(Application::APP_ID, 'picker_enabled', '1') === '1';
+		
+		$pickerEnabled = $this->config->getAppValue(Application::APP_ID, 'picker_enabled', '1') === '1';
 		
 		if ($this->userId === null) {
 			$isAdmin = false;
 		} else {
-			$isAdmin = true;#\OC::$server->getUserManager()->isAdmin($this->userId);
+			$isAdmin = $this->iGroupManager->isAdmin($this->userId);
 		}
 
 		$features = [
-			'picker_enabled' => true,
+			'picker_enabled' => $pickerEnabled,
 			'is_admin' => $isAdmin,
 		];
-
-		//TODO: DEBUG
-		$features['picker_enabled'] = true;
 
 		$this->initialState->provideInitialState('features', $features);
 		Util::addScript(Application::APP_ID, Application::APP_ID . '-reference');

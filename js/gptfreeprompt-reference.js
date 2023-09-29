@@ -81121,7 +81121,7 @@ const webNamespaces = {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "gptfreeprompt-" + chunkId + ".js?v=" + {"vendors-node_modules_nextcloud_dialogs_dist_index_es_js-node_modules_nextcloud_vue_dist_Compo-29ff2c":"0feede779f718bfae478","reference-picker-lazy":"f8805428e85065c9fd3e"}[chunkId] + "";
+/******/ 			return "gptfreeprompt-" + chunkId + ".js?v=" + {"vendors-node_modules_nextcloud_dialogs_dist_index_es_js-node_modules_nextcloud_vue_dist_Compo-29ff2c":"0feede779f718bfae478","reference-picker-lazy":"a7fa08a5235730856858"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -81324,39 +81324,37 @@ __webpack_require__.nc = btoa((0,_nextcloud_auth__WEBPACK_IMPORTED_MODULE_3__.ge
 __webpack_require__.p = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_1__.linkTo)('gptfreeprompt', 'js/'); // eslint-disable-line
 
 const features = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_2__.loadState)('gptfreeprompt', 'features');
-const t = true;
-
-// if (t===true) { // features.picker_enabled === true || (features.picker_enabled === false && features.is_admin === true)
-(0,_nextcloud_vue_dist_Components_NcRichText_js__WEBPACK_IMPORTED_MODULE_0__.registerCustomPickerElement)('gptfreeprompt', async (el, {
-  providerId,
-  accessible
-}) => {
-  const {
-    default: Vue
-  } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js"));
-  Vue.mixin({
-    methods: {
-      t,
-      n
-    }
+if (features.picker_enabled === true || features.picker_enabled === false && features.is_admin === true) {
+  (0,_nextcloud_vue_dist_Components_NcRichText_js__WEBPACK_IMPORTED_MODULE_0__.registerCustomPickerElement)('gptfreeprompt', async (el, {
+    providerId,
+    accessible
+  }) => {
+    const {
+      default: Vue
+    } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js"));
+    Vue.mixin({
+      methods: {
+        t,
+        n
+      }
+    });
+    const {
+      default: GptFreePromptCustomPickerElement
+    } = await Promise.all(/*! import() | reference-picker-lazy */[__webpack_require__.e("vendors-node_modules_nextcloud_dialogs_dist_index_es_js-node_modules_nextcloud_vue_dist_Compo-29ff2c"), __webpack_require__.e("reference-picker-lazy")]).then(__webpack_require__.bind(__webpack_require__, /*! ./views/GptFreePromptCustomPickerElement.vue */ "./src/views/GptFreePromptCustomPickerElement.vue"));
+    const Element = Vue.extend(GptFreePromptCustomPickerElement);
+    const pickerEnabled = features.picker_enabled;
+    const vueElement = new Element({
+      propsData: {
+        providerId,
+        accessible,
+        pickerEnabled
+      }
+    }).$mount(el);
+    return new _nextcloud_vue_dist_Components_NcRichText_js__WEBPACK_IMPORTED_MODULE_0__.NcCustomPickerRenderResult(vueElement.$el, vueElement);
+  }, (el, renderResult) => {
+    renderResult.object.$destroy();
   });
-  const {
-    default: GptFreePromptCustomPickerElement
-  } = await Promise.all(/*! import() | reference-picker-lazy */[__webpack_require__.e("vendors-node_modules_nextcloud_dialogs_dist_index_es_js-node_modules_nextcloud_vue_dist_Compo-29ff2c"), __webpack_require__.e("reference-picker-lazy")]).then(__webpack_require__.bind(__webpack_require__, /*! ./views/GptFreePromptCustomPickerElement.vue */ "./src/views/GptFreePromptCustomPickerElement.vue"));
-  const Element = Vue.extend(GptFreePromptCustomPickerElement);
-  const pickerEnabled = features.picker_enabled;
-  const vueElement = new Element({
-    propsData: {
-      providerId,
-      accessible,
-      pickerEnabled
-    }
-  }).$mount(el);
-  return new _nextcloud_vue_dist_Components_NcRichText_js__WEBPACK_IMPORTED_MODULE_0__.NcCustomPickerRenderResult(vueElement.$el, vueElement);
-}, (el, renderResult) => {
-  renderResult.object.$destroy();
-});
-// }
+}
 })();
 
 /******/ })()

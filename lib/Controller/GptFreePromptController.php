@@ -27,9 +27,9 @@ class GptFreePromptController extends Controller
      * @param string|null $prompt
      * @return DataResponse
      */
-    public function processPrompt(?string $prompt): DataResponse
+    public function processPrompt(string $prompt, int $nResults =1): DataResponse
     {
-        $result = $this->gptFreePromptService->processPrompt($prompt);
+        $result = $this->gptFreePromptService->processPrompt($prompt, $nResults);
         return new DataResponse($result);
     }
 }

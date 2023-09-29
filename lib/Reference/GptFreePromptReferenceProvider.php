@@ -16,8 +16,6 @@ use OCP\IURLGenerator;
 class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider 
 {
 
-	private const RICH_OBJECT_TYPE = Application::APP_ID . '_gptfreeprompt';
-
 	public function __construct(
 		private IL10N $l10n,
 		private IURLGenerator $urlGenerator,
@@ -38,7 +36,7 @@ class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider
 	 * @inheritDoc
 	 */
 	public function getTitle(): string {
-		return $this->l10n->t('Gpt free prompt text generation');		
+		return $this->l10n->t('AI text generation');		
 	}
 
 	/**

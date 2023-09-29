@@ -11,24 +11,23 @@ __webpack_nonce__ = btoa(getRequestToken()) // eslint-disable-line
 __webpack_public_path__ = linkTo('gptfreeprompt', 'js/') // eslint-disable-line
 
 const features = loadState('gptfreeprompt', 'features')
-const t = true
 
-// if (t===true) { // features.picker_enabled === true || (features.picker_enabled === false && features.is_admin === true)
-registerCustomPickerElement('gptfreeprompt', async (el, { providerId, accessible }) => {
-	const { default: Vue } = await import(/* webpackChunkName: "vue-lazy" */'vue')
-	Vue.mixin({ methods: { t, n } })
-	const { default: GptFreePromptCustomPickerElement } = await import(/* webpackChunkName: "reference-picker-lazy" */'./views/GptFreePromptCustomPickerElement.vue')
-	const Element = Vue.extend(GptFreePromptCustomPickerElement)
-	const pickerEnabled = features.picker_enabled
-	const vueElement = new Element({
-		propsData: {
-			providerId,
-			accessible,
-			pickerEnabled,
-		},
-	}).$mount(el)
-	return new NcCustomPickerRenderResult(vueElement.$el, vueElement)
-}, (el, renderResult) => {
-	renderResult.object.$destroy()
-})
-// }
+if (features.picker_enabled === true || (features.picker_enabled === false && features.is_admin === true)) {
+	registerCustomPickerElement('gptfreeprompt', async (el, { providerId, accessible }) => {
+		const { default: Vue } = await import(/* webpackChunkName: "vue-lazy" */'vue')
+		Vue.mixin({ methods: { t, n } })
+		const { default: GptFreePromptCustomPickerElement } = await import(/* webpackChunkName: "reference-picker-lazy" */'./views/GptFreePromptCustomPickerElement.vue')
+		const Element = Vue.extend(GptFreePromptCustomPickerElement)
+		const pickerEnabled = features.picker_enabled
+		const vueElement = new Element({
+			propsData: {
+				providerId,
+				accessible,
+				pickerEnabled,
+			},
+		}).$mount(el)
+		return new NcCustomPickerRenderResult(vueElement.$el, vueElement)
+	}, (el, renderResult) => {
+		renderResult.object.$destroy()
+	})
+}

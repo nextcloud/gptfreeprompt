@@ -8,8 +8,9 @@ use OCP\IConfig;
 use OCP\IL10N;
 use Psr\Log\LoggerInterface;
 use OCP\TextProcessing\IManager;
-#use OCP\TextProcessing\FreePromptTaskType;
-
+use OCP\TextProcessing\FreePromptTaskType;
+use OCP\TextProcessing\Task;
+use OCA\GptFreePrompt\AppInfo\Application;
 
 class GptFreePromptService
 {
@@ -17,17 +18,27 @@ class GptFreePromptService
         private IConfig $config,
         private IL10N $l10n,
         private LoggerInterface $logger,
-        private IManager $textProcessingManager
+        private IManager $textProcessingManager,
+        private ?string $userId
     ) {
     }
-    public function processPrompt(?string $prompt): array
+    public function processPrompt(string $prompt, int $nResults): array
     {
-        $this->logger->warning("Processing prompt: $prompt");
+        $taskTypes = $this->textProcessingManager->getAvailableTaskTypes();
+        if (!in_array(FreePromptTaskType::class, $taskTypes)) {
+            $this->logger->warning('FreePromptTaskType not available');
+            return [];
+        }
 
-        $result = [
-            'prompt' => $prompt,
-            'result' => 'This is a test result'
-        ];
+        $result = [];
+        # Generate nResults prompts
+        for ($i = 0; $i < $nResults; $i++) {
+            $promptTask = new Task(FreePromptTaskType::class, $prompt, Application::APP_ID , $this->userId, (string) bin2hex(random_bytes(16)));
+
+            #$result = $languageModelManager->runTask($promptTask);
+            array_push($result, ['text' => $this->textProcessingManager->runTask($promptTask)]);            
+        }
+
         return $result;
     }
 }

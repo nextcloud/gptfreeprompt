@@ -87,15 +87,13 @@ __webpack_require__.r(__webpack_exports__);
       result: null,
       loading: false,
       models: [],
-      inputPlaceholder: t('integration_openai', 'What is the matter with putting pineapple on pizza?'),
+      inputPlaceholder: t('gptfreeprompt', 'What is the matter with putting pineapple on pizza?'),
       poweredByTitle: '',
       poweredByUrl: '',
-      modelPlaceholder: t('integration_openai', 'Choose a model'),
+      modelPlaceholder: t('gptfreeprompt', 'Choose a model'),
       showAdvanced: false,
-      selectedModel: null,
       includeQuery: false,
       completionNumber: 1,
-      maxTokens: 1000,
       prompts: null
     };
   },
@@ -103,20 +101,8 @@ __webpack_require__.r(__webpack_exports__);
     showAdvancedIcon() {
       return this.showAdvanced ? vue_material_design_icons_ChevronDown_vue__WEBPACK_IMPORTED_MODULE_4__["default"] : vue_material_design_icons_ChevronRight_vue__WEBPACK_IMPORTED_MODULE_3__["default"];
     },
-    formattedModels() {
-      if (this.models) {
-        return this.models.map(m => {
-          return {
-            id: m.id,
-            value: m.id,
-            label: m.id + ' (' + m.owned_by + ')'
-          };
-        });
-      }
-      return [];
-    },
     previewButtonLabel() {
-      return this.result !== null ? t('integration_openai', 'Regenerate') : t('integration_openai', 'Preview');
+      return this.result !== null ? t('gptfreeprompt', 'Regenerate') : t('gptfreeprompt', 'Preview');
     },
     emptyResult() {
       return this.result.trim() === '';
@@ -125,16 +111,24 @@ __webpack_require__.r(__webpack_exports__);
   watch: {},
   mounted() {
     this.focusOnInput();
-    this.getModels();
-    this.getPromptHistory();
-    const capabilities = OC.getCapabilities()?.integration_openai;
-    this.poweredByTitle = capabilities.uses_openai ? t('integration_openai', 'by OpenAI') : t('integration_openai', 'by LocalAI');
-    this.poweredByUrl = capabilities.uses_openai ? 'https://openai.com' : 'https://localai.io/features/text-generation/';
+    // TODO:
+    // this.getPromptHistory()
+    this.prompts = [];
+
+    // TODO:
+    // const capabilities = OC.getCapabilities()?.integration_openai
+    // this.poweredByTitle = capabilities.uses_openai
+    // ? t('gptfreeprompt', 'by OpenAI')
+    // : t('gptfreeprompt', 'by LocalAI')
+    // this.poweredByUrl = capabilities.uses_openai
+    // ? 'https://openai.com'
+    // : 'https://localai.io/features/text-generation/'
   },
+
   methods: {
     focusOnInput() {
       setTimeout(() => {
-        this.$refs['chatgpt-search-input'].$el.getElementsByTagName('input')[0]?.focus();
+        this.$refs['gptfreeprompt-search-input'].$el.getElementsByTagName('input')[0]?.focus();
       }, 300);
     },
     getPromptHistory() {
@@ -143,40 +137,11 @@ __webpack_require__.r(__webpack_exports__);
           type: 1
         }
       };
-      const url = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_14__.generateUrl)('/apps/integration_openai/prompts');
+      const url = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_14__.generateUrl)('/apps/gptfreeprompt/prompt_history');
       return _nextcloud_axios__WEBPACK_IMPORTED_MODULE_13__["default"].get(url, params).then(response => {
         this.prompts = response.data;
       }).catch(error => {
         console.error(error);
-      });
-    },
-    getModels() {
-      const url = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_14__.generateUrl)('/apps/integration_openai/models');
-      return _nextcloud_axios__WEBPACK_IMPORTED_MODULE_13__["default"].get(url).then(response => {
-        this.models = response.data?.data;
-        const defaultModelId = response.data?.default_completion_model_id;
-        const defaultModel = this.models.find(m => m.id === defaultModelId);
-        const modelToSelect = defaultModel ?? this.models[0] ?? null;
-        if (modelToSelect) {
-          this.selectedModel = {
-            id: modelToSelect.id,
-            value: modelToSelect.id,
-            label: modelToSelect.id + ' (' + modelToSelect.owned_by + ')'
-          };
-        }
-      }).catch(error => {
-        console.error(error);
-      });
-    },
-    saveModel(modelId) {
-      const req = {
-        values: {
-          default_completion_model_id: modelId
-        }
-      };
-      const url = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_14__.generateUrl)('/apps/integration_openai/config');
-      return _nextcloud_axios__WEBPACK_IMPORTED_MODULE_13__["default"].put(url, req).then(response => {}).catch(error => {
-        (0,_nextcloud_dialogs__WEBPACK_IMPORTED_MODULE_15__.showError)(t('integration_openai', 'Failed to save OpenAI default model ID') + ': ' + error.response?.request?.responseText);
       });
     },
     submit() {
@@ -197,41 +162,36 @@ __webpack_require__.r(__webpack_exports__);
       this.loading = true;
       const params = {
         prompt: this.query,
-        n: this.completionNumber,
-        maxTokens: this.maxTokens
+        nResults: this.completionNumber
       };
-      if (this.selectedModel) {
-        params.model = this.selectedModel.id;
-        this.saveModel(this.selectedModel.id);
-      }
-      const url = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_14__.generateUrl)('/apps/integration_openai/completions');
+      const url = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_14__.generateUrl)('/apps/gptfreeprompt/process_prompt');
       return _nextcloud_axios__WEBPACK_IMPORTED_MODULE_13__["default"].post(url, params).then(response => {
         const data = response.data;
-        if (data.choices && data.choices.length && data.choices.length > 0) {
-          this.processCompletion(data.choices);
+        if (data.length && data.length > 0) {
+          this.processCompletion(data);
           this.insertPrompt(this.query);
         } else {
           this.error = response.data.error;
         }
       }).catch(error => {
         console.error('OpenAI completions request error', error);
-        (0,_nextcloud_dialogs__WEBPACK_IMPORTED_MODULE_15__.showError)(t('integration_openai', 'OpenAI error') + ': ' + (error.response?.data?.body?.error?.message || error.response?.data?.body?.error?.code || error.response?.data?.error || t('integration_openai', 'Unknown OpenAI API error')));
+        (0,_nextcloud_dialogs__WEBPACK_IMPORTED_MODULE_15__.showError)(t('gptfreeprompt', 'OpenAI error') + ': ' + (error.response?.data?.body?.error?.message || error.response?.data?.body?.error?.code || error.response?.data?.error || t('gptfreeprompt', 'Unknown OpenAI API error')));
       }).then(() => {
         this.loading = false;
       });
     },
-    processCompletion(choices) {
-      const answers = this.selectedModel.id.startsWith('gpt-') ? choices.filter(c => !!c.message?.content).map(c => c.message?.content.replace(/^\s+|\s+$/g, '')) : choices.filter(c => !!c.text).map(c => c.text.replace(/^\s+|\s+$/g, ''));
+    processCompletion(response) {
+      const answers = response.filter(c => !!c.text).map(c => c.text.replace(/^\s+|\s+$/g, ''));
       if (answers.length > 0) {
         if (answers.length === 1) {
-          this.result = this.includeQuery ? t('integration_openai', 'Prompt') + '\n' + this.query + '\n\n' + t('integration_openai', 'Result') + '\n' + answers[0] : answers[0];
+          this.result = this.includeQuery ? t('gptfreeprompt', 'Prompt') + '\n' + this.query + '\n\n' + t('gptfreeprompt', 'Result') + '\n' + answers[0] : answers[0];
         } else {
           const multiAnswers = answers.map((a, i) => {
-            return t('integration_openai', 'Result {index}', {
+            return t('gptfreeprompt', 'Result {index}', {
               index: i + 1
             }) + '\n' + a;
           });
-          this.result = this.includeQuery ? t('integration_openai', 'Prompt') + '\n' + this.query + '\n\n' + multiAnswers.join('\n\n') : multiAnswers.join('\n\n');
+          this.result = this.includeQuery ? t('gptfreeprompt', 'Prompt') + '\n' + this.query + '\n\n' + multiAnswers.join('\n\n') : multiAnswers.join('\n\n');
         }
       }
     }
@@ -255,10 +215,12 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "chatgpt-picker-content-wrapper"
-  }, [_c("div", {
-    staticClass: "chatgpt-picker-content"
-  }, [_c("h2", [_vm._v("\n\t\t\t" + _vm._s(_vm.t("integration_openai", "ChatGPT-like text generation")) + "\n\t\t")]), _vm._v(" "), _c("a", {
+    staticClass: "gptfreeprompt-picker-content-wrapper"
+  }, [!_vm.pickerEnabled ? _c("div", {
+    staticClass: "gptfreeprompt-picker-content"
+  }, [_c("h2", [_vm._v("\n\t\t\t" + _vm._s(_vm.t("gptfreeprompt", "ERROR: No free prompt provider available")) + "\n\t\t")])]) : _vm._e(), _vm._v(" "), _vm.pickerEnabled ? _c("div", {
+    staticClass: "gptfreeprompt-picker-content"
+  }, [_c("h2", [_vm._v("\n\t\t\t" + _vm._s(_vm.t("gptfreeprompt", "AI text generation")) + "\n\t\t")]), _vm._v(" "), _c("a", {
     staticClass: "attribution",
     attrs: {
       target: "_blank",
@@ -267,7 +229,7 @@ var render = function render() {
   }, [_vm._v("\n\t\t\t" + _vm._s(_vm.poweredByTitle) + "\n\t\t")]), _vm._v(" "), _c("div", {
     staticClass: "input-wrapper"
   }, [_c("NcTextField", {
-    ref: "chatgpt-search-input",
+    ref: "gptfreeprompt-search-input",
     attrs: {
       value: _vm.query,
       label: _vm.inputPlaceholder,
@@ -306,13 +268,13 @@ var render = function render() {
     });
   }), 1) : _vm._e(), _vm._v(" "), _vm.result !== null ? _c("div", {
     staticClass: "preview"
-  }, [_c("h3", [_vm._v(_vm._s(_vm.t("integration_openai", "Preview")))]), _vm._v(" "), _c("NcRichContenteditable", {
+  }, [_c("h3", [_vm._v(_vm._s(_vm.t("gptfreeprompt", "Preview")))]), _vm._v(" "), _c("NcRichContenteditable", {
     staticClass: "editable-preview",
     attrs: {
       value: _vm.result,
       multiline: true,
       disabled: _vm.loading,
-      placeholder: _vm.t("integration_openai", "Preview content"),
+      placeholder: _vm.t("gptfreeprompt", "Preview content"),
       "link-autocomplete": false
     },
     on: {
@@ -326,7 +288,7 @@ var render = function render() {
     staticClass: "advanced-button",
     attrs: {
       type: "tertiary",
-      "aria-label": _vm.t("integration_openai", "Show/hide advanced options")
+      "aria-label": _vm.t("gptfreeprompt", "Show/hide advanced options")
     },
     on: {
       click: function ($event) {
@@ -341,11 +303,11 @@ var render = function render() {
         })];
       },
       proxy: true
-    }])
-  }, [_vm._v("\n\t\t\t\t" + _vm._s(_vm.t("integration_openai", "Advanced options")) + "\n\t\t\t")]), _vm._v(" "), _c("NcButton", {
+    }], null, false, 1568011672)
+  }, [_vm._v("\n\t\t\t\t" + _vm._s(_vm.t("gptfreeprompt", "Advanced options")) + "\n\t\t\t")]), _vm._v(" "), _c("NcButton", {
     attrs: {
       type: "secondary",
-      "aria-label": _vm.t("integration_openai", "Preview text generation by OpenAI"),
+      "aria-label": _vm.t("gptfreeprompt", "Preview text generation by OpenAI"),
       disabled: _vm.loading || !_vm.query
     },
     on: {
@@ -357,11 +319,11 @@ var render = function render() {
         return [_vm.loading ? _c("NcLoadingIcon") : _vm.result !== null ? _c("RefreshIcon") : _c("EyeIcon")];
       },
       proxy: true
-    }])
+    }], null, false, 4202185618)
   }, [_vm._v("\n\t\t\t\t" + _vm._s(_vm.previewButtonLabel) + "\n\t\t\t\t")]), _vm._v(" "), _vm.result !== null ? _c("NcButton", {
     attrs: {
       type: "primary",
-      "aria-label": _vm.t("integration_openai", "Submit text generated by OpenAI"),
+      "aria-label": _vm.t("gptfreeprompt", "Submit text generated by OpenAI"),
       disabled: _vm.loading || _vm.emptyResult
     },
     on: {
@@ -374,7 +336,7 @@ var render = function render() {
       },
       proxy: true
     }], null, false, 1168934321)
-  }, [_vm._v("\n\t\t\t\t" + _vm._s(_vm.t("integration_openai", "Send")) + "\n\t\t\t\t")]) : _vm._e()], 1), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n\t\t\t\t" + _vm._s(_vm.t("gptfreeprompt", "Send")) + "\n\t\t\t\t")]) : _vm._e()], 1), _vm._v(" "), _c("div", {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -394,7 +356,7 @@ var render = function render() {
         _vm.includeQuery = $event;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.t("integration_openai", "Include the prompt in the result")) + "\n\t\t\t\t")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.t("gptfreeprompt", "Include the prompt in the result")) + "\n\t\t\t\t")]), _vm._v(" "), _c("div", {
     staticClass: "spacer"
   })], 1), _vm._v(" "), _c("div", {
     staticClass: "line"
@@ -402,7 +364,7 @@ var render = function render() {
     attrs: {
       for: "nb-results"
     }
-  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.t("integration_openai", "How many results to generate")) + "\n\t\t\t\t")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.t("gptfreeprompt", "How many results to generate")) + "\n\t\t\t\t")]), _vm._v(" "), _c("div", {
     staticClass: "spacer"
   }), _vm._v(" "), _c("input", {
     directives: [{
@@ -427,77 +389,7 @@ var render = function render() {
         _vm.completionNumber = $event.target.value;
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "line"
-  }, [_c("label", {
-    attrs: {
-      for: "openai-completion-model-select"
-    }
-  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.t("integration_openai", "Model to use")) + "\n\t\t\t\t")]), _vm._v(" "), _c("a", {
-    attrs: {
-      title: _vm.t("integration_openai", "More information about OpenAI models"),
-      href: "https://beta.openai.com/docs/models",
-      target: "_blank"
-    }
-  }, [_c("NcButton", {
-    attrs: {
-      type: "tertiary",
-      "aria-label": _vm.t("integration_openai", "More information about OpenAI models")
-    },
-    scopedSlots: _vm._u([{
-      key: "icon",
-      fn: function () {
-        return [_c("HelpCircleIcon")];
-      },
-      proxy: true
-    }])
-  })], 1), _vm._v(" "), _c("div", {
-    staticClass: "spacer"
-  }), _vm._v(" "), _c("NcSelect", {
-    staticClass: "model-select",
-    attrs: {
-      options: _vm.formattedModels,
-      "input-id": "openai-completion-model-select"
-    },
-    model: {
-      value: _vm.selectedModel,
-      callback: function ($$v) {
-        _vm.selectedModel = $$v;
-      },
-      expression: "selectedModel"
-    }
-  })], 1), _vm._v(" "), _c("div", {
-    staticClass: "line"
-  }, [_c("label", {
-    attrs: {
-      for: "max-tokens"
-    }
-  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.t("integration_openai", "Approximate maximum number of words to generate (tokens)")) + "\n\t\t\t\t")]), _vm._v(" "), _c("div", {
-    staticClass: "spacer"
-  }), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.maxTokens,
-      expression: "maxTokens"
-    }],
-    attrs: {
-      id: "max-tokens",
-      type: "number",
-      min: "10",
-      max: "100000",
-      step: "1"
-    },
-    domProps: {
-      value: _vm.maxTokens
-    },
-    on: {
-      input: function ($event) {
-        if ($event.target.composing) return;
-        _vm.maxTokens = $event.target.value;
-      }
-    }
-  })])])])]);
+  })])])]) : _vm._e()]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -524,90 +416,90 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.chatgpt-picker-content-wrapper[data-v-043c6bdc] {
+___CSS_LOADER_EXPORT___.push([module.id, `.gptfreeprompt-picker-content-wrapper[data-v-043c6bdc] {
   width: 100%;
 }
-.chatgpt-picker-content[data-v-043c6bdc] {
+.gptfreeprompt-picker-content[data-v-043c6bdc] {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 12px 16px 16px 16px;
 }
-.chatgpt-picker-content h2[data-v-043c6bdc] {
+.gptfreeprompt-picker-content h2[data-v-043c6bdc] {
   display: flex;
   align-items: center;
 }
-.chatgpt-picker-content .prompts[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .prompts[data-v-043c6bdc] {
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.chatgpt-picker-content .prompts > *[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .prompts > *[data-v-043c6bdc] {
   margin-right: 8px;
 }
-.chatgpt-picker-content .prompt-bubble[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .prompt-bubble[data-v-043c6bdc] {
   max-width: 250px;
 }
-.chatgpt-picker-content .preview[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .preview[data-v-043c6bdc] {
   width: 100%;
 }
-.chatgpt-picker-content .preview h3[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .preview h3[data-v-043c6bdc] {
   font-weight: bold;
 }
-.chatgpt-picker-content .preview .editable-preview[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .preview .editable-preview[data-v-043c6bdc] {
   width: 100% !important;
   max-height: 300px !important;
 }
-.chatgpt-picker-content .spacer[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .spacer[data-v-043c6bdc] {
   flex-grow: 1;
 }
-.chatgpt-picker-content .attribution[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .attribution[data-v-043c6bdc] {
   color: var(--color-text-maxcontrast);
   padding-bottom: 8px;
 }
-.chatgpt-picker-content .input-wrapper[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .input-wrapper[data-v-043c6bdc] {
   display: flex;
   align-items: center;
   width: 100%;
 }
-.chatgpt-picker-content .prompt-select[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .prompt-select[data-v-043c6bdc] {
   width: 100%;
   margin-top: 4px;
 }
-.chatgpt-picker-content .footer[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .footer[data-v-043c6bdc] {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: end;
   margin-top: 12px;
 }
-.chatgpt-picker-content .footer > *[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .footer > *[data-v-043c6bdc] {
   margin-left: 4px;
 }
-.chatgpt-picker-content .advanced[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .advanced[data-v-043c6bdc] {
   width: 100%;
   padding: 12px 0;
 }
-.chatgpt-picker-content .advanced .line[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .advanced .line[data-v-043c6bdc] {
   display: flex;
   align-items: center;
   margin-top: 8px;
 }
-.chatgpt-picker-content .advanced .line input[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .advanced .line input[data-v-043c6bdc] {
   width: 200px;
 }
-.chatgpt-picker-content .advanced .line .model-select[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .advanced .line .model-select[data-v-043c6bdc] {
   width: 300px;
 }
-.chatgpt-picker-content .advanced input[type=number][data-v-043c6bdc] {
+.gptfreeprompt-picker-content .advanced input[type=number][data-v-043c6bdc] {
   width: 120px;
   appearance: initial !important;
   -moz-appearance: initial !important;
   -webkit-appearance: initial !important;
 }
-.chatgpt-picker-content .advanced .include-query[data-v-043c6bdc] {
+.gptfreeprompt-picker-content .advanced .include-query[data-v-043c6bdc] {
   margin-right: 16px;
 }`, ""]);
 // Exports
@@ -754,4 +646,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 }]);
-//# sourceMappingURL=gptfreeprompt-reference-picker-lazy.js.map?v=f8805428e85065c9fd3e
+//# sourceMappingURL=gptfreeprompt-reference-picker-lazy.js.map?v=a7fa08a5235730856858
