@@ -8,16 +8,15 @@ use OC\Collaboration\Reference\ReferenceManager;
 use OCA\GptFreePrompt\AppInfo\Application;
 use OCA\GptFreePrompt\Service\GptFreePromptService;
 use OCP\Collaboration\Reference\ADiscoverableReferenceProvider;
-
 use OCP\Collaboration\Reference\IReference;
-use OCP\IL10N;
+#use OCP\IL10N;
 use OCP\IURLGenerator;
 
 class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider 
 {
 
 	public function __construct(
-		private IL10N $l10n,
+		#private IL10N $l10n,
 		private IURLGenerator $urlGenerator,
 		private ReferenceManager $referenceManager,
 		private GptFreePromptService $gptFreePromptService,
@@ -36,7 +35,8 @@ class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider
 	 * @inheritDoc
 	 */
 	public function getTitle(): string {
-		return $this->l10n->t('AI text generation');		
+		#return $this->l10n->t('AI text generation');		
+		return 'AI text generation';
 	}
 
 	/**
