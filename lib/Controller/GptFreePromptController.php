@@ -29,7 +29,21 @@ class GptFreePromptController extends Controller
      */
     public function processPrompt(string $prompt, int $nResults =1): DataResponse
     {
-        $result = $this->gptFreePromptService->processPrompt($prompt, $nResults);
+        $result = $this->gptFreePromptService->processPrompt($prompt, $nResults, $this->userId);
         return new DataResponse($result);
     }
+
+    /**
+     * @NoAdminRequired
+     * @NoCSRFRequired
+     *
+     * @return DataResponse
+     */
+    public function getPromptHistory(): DataResponse {
+		$response = $this->gptFreePromptService->getPromptHistory($this->userId);
+		if (isset($response['error'])) {
+			return new DataResponse($response, Http::STATUS_BAD_REQUEST);
+		}
+		return new DataResponse($response);
+	}
 }

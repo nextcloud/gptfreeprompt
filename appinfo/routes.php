@@ -15,5 +15,6 @@ return [
 		# Retrieve a list of available freeprompt providers from the backend
 		# Prosess a prompt (prompt and provider is suppilied as get params)
 		['name' => 'GptFreePrompt#processPrompt', 'url' => '/process_prompt', 'verb' => 'POST'],			
+		['name' => 'GptFreePrompt#getPromptHistory', 'url' => '/prompt_history', 'verb' => 'GET'],
 	],
 ];

@@ -197,9 +197,7 @@ export default {
 
 	mounted() {
 		this.focusOnInput()
-		// TODO:
-		// this.getPromptHistory()
-		this.prompts = []
+		this.getPromptHistory()
 
 		// TODO:
 		// const capabilities = OC.getCapabilities()?.integration_openai
@@ -220,7 +218,6 @@ export default {
 		getPromptHistory() {
 			const params = {
 				params: {
-					type: 1,
 				},
 			}
 			const url = generateUrl('/apps/gptfreeprompt/prompt_history')

@@ -10,6 +10,7 @@ use OCP\TextProcessing\IManager;
 use OCP\TextProcessing\FreePromptTaskType;
 use OCP\TextProcessing\Task;
 use OCA\GptFreePrompt\AppInfo\Application;
+use OCA\GptFreePrompt\Db\PromptMapper;
 
 class GptFreePromptService
 {
@@ -17,10 +18,11 @@ class GptFreePromptService
         private IConfig $config,
         private LoggerInterface $logger,
         private IManager $textProcessingManager,
-        private ?string $userId
+        private ?string $userId,
+        private PromptMapper $promptMapper,
     ) {
     }
-    public function processPrompt(string $prompt, int $nResults): array
+    public function processPrompt(string $prompt, int $nResults, string $userId): array
     {
         $taskTypes = $this->textProcessingManager->getAvailableTaskTypes();
         if (!in_array(FreePromptTaskType::class, $taskTypes)) {
@@ -37,7 +39,19 @@ class GptFreePromptService
             array_push($result, ['text' => $this->textProcessingManager->runTask($promptTask)]);            
         }
 
+        # Save prompt to database
+        $this->promptMapper->createPrompt($userId, $prompt);
+
         return $result;
     }
+
+    /**
+	 * @param string $userId
+	 * @return array
+	 * @throws \OCP\DB\Exception
+	 */
+	public function getPromptHistory(string $userId): array {
+		return $this->promptMapper->getPromptsOfUser($userId);
+	}
 }
 

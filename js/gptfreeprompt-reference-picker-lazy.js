@@ -111,9 +111,7 @@ __webpack_require__.r(__webpack_exports__);
   watch: {},
   mounted() {
     this.focusOnInput();
-    // TODO:
-    // this.getPromptHistory()
-    this.prompts = [];
+    this.getPromptHistory();
 
     // TODO:
     // const capabilities = OC.getCapabilities()?.integration_openai
@@ -133,9 +131,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     getPromptHistory() {
       const params = {
-        params: {
-          type: 1
-        }
+        params: {}
       };
       const url = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_14__.generateUrl)('/apps/gptfreeprompt/prompt_history');
       return _nextcloud_axios__WEBPACK_IMPORTED_MODULE_13__["default"].get(url, params).then(response => {
@@ -646,4 +642,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 }]);
-//# sourceMappingURL=gptfreeprompt-reference-picker-lazy.js.map?v=a7fa08a5235730856858
+//# sourceMappingURL=gptfreeprompt-reference-picker-lazy.js.map?v=962f17535ba0ce675777

@@ -9,14 +9,14 @@ use OCA\GptFreePrompt\AppInfo\Application;
 use OCA\GptFreePrompt\Service\GptFreePromptService;
 use OCP\Collaboration\Reference\ADiscoverableReferenceProvider;
 use OCP\Collaboration\Reference\IReference;
-#use OCP\IL10N;
+use OCP\IL10N;
 use OCP\IURLGenerator;
 
 class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider 
 {
 
 	public function __construct(
-		#private IL10N $l10n,
+		private IL10N $l10n,
 		private IURLGenerator $urlGenerator,
 		private ReferenceManager $referenceManager,
 		private GptFreePromptService $gptFreePromptService,
