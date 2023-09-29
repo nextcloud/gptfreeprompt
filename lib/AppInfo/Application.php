@@ -15,7 +15,7 @@ class Application extends App implements IBootstrap
 {
 	public const APP_ID = 'gptfreeprompt';
 
-	public const MAX_PROMPT_PER_TYPE_PER_USER = 5;
+	public const MAX_STORED_PROMPTS_PER_USER = 5;
 
 	public function __construct() {
 		parent::__construct(self::APP_ID);

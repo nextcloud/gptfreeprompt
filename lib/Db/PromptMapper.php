@@ -77,9 +77,12 @@ class PromptMapper extends QBMapper {
 			->from($this->getTableName())
 			->andWhere(
 				$qb->expr()->eq('user_id', $qb->createNamedParameter($userId, IQueryBuilder::PARAM_STR))
-			);
-
-		return $this->findEntity($qb);
+			)
+            ->andWhere(
+                $qb->expr()->eq('value', $qb->createNamedParameter($value, IQueryBuilder::PARAM_STR))
+            );
+            
+        return $this->findEntity($qb);
 	}
 
 	/**
@@ -97,7 +100,7 @@ class PromptMapper extends QBMapper {
 			);
 		
 		$qb->orderBy('timestamp', 'DESC')
-			->setMaxResults(Application::MAX_PROMPT_PER_TYPE_PER_USER);
+			->setMaxResults(Application::MAX_STORED_PROMPTS_PER_USER);
 
 		return $this->findEntities($qb);
 	}
@@ -164,7 +167,7 @@ class PromptMapper extends QBMapper {
 				$qb->expr()->eq('user_id', $qb->createNamedParameter($userId, IQueryBuilder::PARAM_STR))
 			)			
 			->orderBy('timestamp', 'DESC')
-			->setMaxResults(Application::MAX_PROMPT_PER_TYPE_PER_USER);
+			->setMaxResults(Application::MAX_STORED_PROMPTS_PER_USER);
 
 		$req = $qb->executeQuery();
 
@@ -176,7 +179,7 @@ class PromptMapper extends QBMapper {
 		$qb->resetQueryParts();
 
 		// if we have at least 20 prompts stored, delete everything but the last 20 ones
-		if (count($lastPromptTs) === Application::MAX_PROMPT_PER_TYPE_PER_USER) {
+		if (count($lastPromptTs) === Application::MAX_STORED_PROMPTS_PER_USER) {
 			$firstPromptTsToKeep = end($lastPromptTs);
 			$qb->delete($this->getTableName())
 				->where(
