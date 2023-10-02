@@ -16,8 +16,8 @@
     <category>integration</category>
     <website>https://github.com/nextcloud/gptfreeprompt</website>
     <bugs>https://github.com/nextcloud/gptfreeprompt/issues</bugs>
-    <screenshot>https://user-images.githubusercontent.com/64466176/271966916-bf8adffb-bccb-4210-9eb2-8b3e984d06dd.png</screenshot>
+    <screenshot>https://github.com/MB-Finski/gptfreeprompt/assets/64466176/bf8adffb-bccb-4210-9eb2-8b3e984d06dd</screenshot>
     <dependencies>
-        <nextcloud min-version="27" max-version="28"/>
+        <nextcloud min-version="27.1.0" max-version="28"/>
     </dependencies>
 </info>
