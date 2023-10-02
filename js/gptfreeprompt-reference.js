@@ -81121,7 +81121,7 @@ const webNamespaces = {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "gptfreeprompt-" + chunkId + ".js?v=" + {"vendors-node_modules_nextcloud_dialogs_dist_index_es_js-node_modules_nextcloud_vue_dist_Compo-29ff2c":"0feede779f718bfae478","reference-picker-lazy":"962f17535ba0ce675777"}[chunkId] + "";
+/******/ 			return "gptfreeprompt-" + chunkId + ".js?v=" + {"vendors-node_modules_nextcloud_dialogs_dist_index_es_js-node_modules_nextcloud_vue_dist_Compo-29ff2c":"0feede779f718bfae478","reference-picker-lazy":"12cb521433b7b5f31621"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
