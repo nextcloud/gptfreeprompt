@@ -155,6 +155,7 @@ appstore:
 	--exclude="../$(app_name)/package-lock.json" \
 	--exclude="../$(app_name)/LICENSES" \
 	../$(app_name) \
+	
 .PHONY: test
 test: composer
 	$(CURDIR)/vendor/phpunit/phpunit/phpunit -c phpunit.xml
