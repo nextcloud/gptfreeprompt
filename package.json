@@ -1,7 +1,7 @@
 {
   "name": "gptfreeprompt",
   "description": "A SmartPicker for interfacing with the GPT integrations providing free prompt cabability",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Sami Finnilä <sami.finnila@nextcloud.com>",
   "contributors": [],
   "bugs": {
