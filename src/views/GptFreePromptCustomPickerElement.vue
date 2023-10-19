@@ -9,11 +9,6 @@
 			<h2>
 				{{ t('gptfreeprompt', 'AI text generation') }}
 			</h2>
-			<a class="attribution"
-				target="_blank"
-				:href="poweredByUrl">
-				{{ poweredByTitle }}
-			</a>
 			<div class="input-wrapper">
 				<NcTextField
 					ref="gptfreeprompt-search-input"
@@ -166,9 +161,6 @@ export default {
 			loading: false,
 			models: [],
 			inputPlaceholder: t('gptfreeprompt', 'What is the matter with putting pineapple on pizza?'),
-			poweredByTitle: '',
-			poweredByUrl: '',
-			modelPlaceholder: t('gptfreeprompt', 'Choose a model'),
 			showAdvanced: false,
 			includeQuery: false,
 			completionNumber: 1,
@@ -198,15 +190,6 @@ export default {
 	mounted() {
 		this.focusOnInput()
 		this.getPromptHistory()
-
-		// TODO:
-		// const capabilities = OC.getCapabilities()?.integration_openai
-		// this.poweredByTitle = capabilities.uses_openai
-		// ? t('gptfreeprompt', 'by OpenAI')
-		// : t('gptfreeprompt', 'by LocalAI')
-		// this.poweredByUrl = capabilities.uses_openai
-		// ? 'https://openai.com'
-		// : 'https://localai.io/features/text-generation/'
 	},
 
 	methods: {
