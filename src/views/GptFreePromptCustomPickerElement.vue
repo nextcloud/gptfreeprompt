@@ -244,13 +244,13 @@ export default {
 					}
 				})
 				.catch((error) => {
-					console.error('OpenAI completions request error', error)
+					console.error('Text  completions request error', error)
 					showError(
-						t('gptfreeprompt', 'OpenAI error') + ': '
+						t('gptfreeprompt', 'Text generation error') + ': '
 							+ (error.response?.data?.body?.error?.message
 								|| error.response?.data?.body?.error?.code
 								|| error.response?.data?.error
-								|| t('gptfreeprompt', 'Unknown OpenAI API error')
+								|| t('gptfreeprompt', 'Unknown text generation API error')
 							),
 					)
 				})
