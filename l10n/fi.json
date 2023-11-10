@@ -1,0 +1,7 @@
+{ "translations": {
+    "Preview" : "Esikatselu",
+    "Preview content" : "Esikatsele sisältö",
+    "Send" : "Lähetä",
+    "Result" : "Tulos"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
