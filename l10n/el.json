@@ -1,0 +1,9 @@
+{ "translations": {
+    "Preview" : "Προεπισκόπηση",
+    "Preview content" : "Προεπισκόπηση περιεχομένου",
+    "Show/hide advanced options" : "Εμφάνιση/απόκρυψη προηγμένων επιλογών",
+    "Advanced options" : "Επιλογές για προχωρημένους",
+    "Send" : "Αποστολή",
+    "Result" : "Αποτέλεσμα"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

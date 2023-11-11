@@ -2,6 +2,7 @@ OC.L10N.register(
     "gptfreeprompt",
     {
     "Preview" : "Previsualizar",
+    "Advanced options" : "Opciones avanzadas",
     "Send" : "Enviar",
     "Result" : "Resultado"
 },

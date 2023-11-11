@@ -1,0 +1,7 @@
+{ "translations": {
+    "Preview" : "Forhåndsvisning",
+    "Advanced options" : "Avancerede indstillinger",
+    "Send" : "Send",
+    "Result" : "Resultat"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
