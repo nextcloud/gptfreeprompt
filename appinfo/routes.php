@@ -1,4 +1,5 @@
 <?php
+
 // SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -13,7 +14,7 @@
 return [
 	'routes' => [
 		# Prosess a prompt (prompt is suppilied as a get param)
-		['name' => 'GptFreePrompt#processPrompt', 'url' => '/process_prompt', 'verb' => 'POST'],			
+		['name' => 'GptFreePrompt#processPrompt', 'url' => '/process_prompt', 'verb' => 'POST'],
 		['name' => 'GptFreePrompt#getPromptHistory', 'url' => '/prompt_history', 'verb' => 'GET'],
 	],
 ];

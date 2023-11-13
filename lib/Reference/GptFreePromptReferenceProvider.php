@@ -1,4 +1,5 @@
 <?php
+
 // SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -12,9 +13,7 @@ use OCP\Collaboration\Reference\IReference;
 use OCP\IL10N;
 use OCP\IURLGenerator;
 
-class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider 
-{
-
+class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider {
 	public function __construct(
 		private IL10N $l10n,
 		private IURLGenerator $urlGenerator,
@@ -27,7 +26,7 @@ class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider
 	/**
 	 * @inheritDoc
 	 */
-	public function getId(): string	{
+	public function getId(): string {
 		return 'gptfreeprompt';
 	}
 
@@ -35,14 +34,14 @@ class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider
 	 * @inheritDoc
 	 */
 	public function getTitle(): string {
-		#return $this->l10n->t('AI text generation');		
+		#return $this->l10n->t('AI text generation');
 		return 'AI text generation';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
-	public function getOrder(): int	{
+	public function getOrder(): int {
 		return 10;
 	}
 
@@ -59,7 +58,7 @@ class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider
 	 * @inheritDoc
 	 */
 	public function matchReference(string $referenceText): bool {
-		return false;		
+		return false;
 	}
 
 	/**
@@ -109,5 +108,5 @@ class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider
 		$this->referenceManager->invalidateCache($userId);
 	}
 
-	
+
 }

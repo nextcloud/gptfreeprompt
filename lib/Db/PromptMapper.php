@@ -1,4 +1,5 @@
 <?php
+
 // SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -78,11 +79,11 @@ class PromptMapper extends QBMapper {
 			->andWhere(
 				$qb->expr()->eq('user_id', $qb->createNamedParameter($userId, IQueryBuilder::PARAM_STR))
 			)
-            ->andWhere(
-                $qb->expr()->eq('value', $qb->createNamedParameter($value, IQueryBuilder::PARAM_STR))
-            );
-            
-        return $this->findEntity($qb);
+			->andWhere(
+				$qb->expr()->eq('value', $qb->createNamedParameter($value, IQueryBuilder::PARAM_STR))
+			);
+
+		return $this->findEntity($qb);
 	}
 
 	/**
@@ -98,7 +99,7 @@ class PromptMapper extends QBMapper {
 			->where(
 				$qb->expr()->eq('user_id', $qb->createNamedParameter($userId, IQueryBuilder::PARAM_STR))
 			);
-		
+
 		$qb->orderBy('timestamp', 'DESC')
 			->setMaxResults(Application::MAX_STORED_PROMPTS_PER_USER);
 
@@ -165,7 +166,7 @@ class PromptMapper extends QBMapper {
 			->from($this->getTableName())
 			->where(
 				$qb->expr()->eq('user_id', $qb->createNamedParameter($userId, IQueryBuilder::PARAM_STR))
-			)			
+			)
 			->orderBy('timestamp', 'DESC')
 			->setMaxResults(Application::MAX_STORED_PROMPTS_PER_USER);
 

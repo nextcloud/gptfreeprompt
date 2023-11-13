@@ -1,4 +1,5 @@
 <?php
+
 // SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -10,15 +11,13 @@ use OCP\Collaboration\Reference\RenderReferenceEvent;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\IConfig;
-use OCP\Util;
 use OCP\IGroupManager;
+use OCP\Util;
 
 #DEBUG: import logger
 use Psr\Log\LoggerInterface;
 
-
 class GptFreePromptReferenceListener implements IEventListener {
-
 	public function __construct(
 		private IConfig $config,
 		private IInitialState $initialState,
@@ -26,17 +25,17 @@ class GptFreePromptReferenceListener implements IEventListener {
 		private LoggerInterface $logger,
 		private IGroupManager $iGroupManager,
 	) {
-		
+
 	}
 
 	public function handle(Event $event): void {
 
 		if (!$event instanceof RenderReferenceEvent) {
 			return;
-		}		
-		
+		}
+
 		$pickerEnabled = $this->config->getAppValue(Application::APP_ID, 'picker_enabled', '1') === '1';
-		
+
 		if ($this->userId === null) {
 			$isAdmin = false;
 		} else {
