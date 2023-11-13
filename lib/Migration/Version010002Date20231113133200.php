@@ -11,7 +11,7 @@ use OCP\DB\Types;
 use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
-class Version010000Date20230929162000 extends SimpleMigrationStep {
+class Version010002Date20231113133200 extends SimpleMigrationStep {
 	/**
 	 * @param IOutput $output
 	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
@@ -30,25 +30,9 @@ class Version010000Date20230929162000 extends SimpleMigrationStep {
 		/** @var ISchemaWrapper $schema */
 		$schema = $schemaClosure();
 
-		if (!$schema->hasTable('gptfreeprompt_prompts')) {
-			$table = $schema->createTable('gptfreeprompt_prompts');
-			$table->addColumn('id', Types::BIGINT, [
-				'autoincrement' => true,
-				'notnull' => true,
-			]);
-			$table->addColumn('user_id', Types::STRING, [
-				'notnull' => true,
-				'length' => 64,
-			]);
-			$table->addColumn('value', Types::STRING, [
-				'notnull' => true,
-				'length' => 1000,
-			]);
-			$table->addColumn('timestamp', Types::INTEGER, [
-				'notnull' => true,
-			]);
-			$table->setPrimaryKey(['id']);
-			$table->addIndex(['user_id'], 'gptfreeprompt_prompt_userid');			
+		if ($schema->hasTable('gptfreeprompt_prompts')) {
+			$table = $schema->getTable('gptfreeprompt_prompts');
+			$table->addIndex(['user_id', 'timestamp'], 'gptfreeprompt_prompt_uid_ts');
 		}
 
 		return $schema;

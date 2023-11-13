@@ -114,22 +114,21 @@ class PromptMapper extends QBMapper {
 	 * @throws Exception
 	 */
 	public function createPrompt(string $userId, string $value, ?int $timestamp = null): Prompt {
+		if ($timestamp === null) {
+			$timestamp = (new DateTime())->getTimestamp();
+		}
+		
 		try {
 			$prompt = $this->getPromptOfUserByValue($userId, $value);
-			$ts = (new DateTime())->getTimestamp();
-			$prompt->setTimestamp($ts);
+			$prompt->setTimestamp($timestamp);
 			return $this->update($prompt);
 		} catch (DoesNotExistException | MultipleObjectsReturnedException $e) {
 		}
 
-		// if the prompt does not exist, cleanup and create it
-
+		// If the prompt does not exist, cleanup and create it
 		$prompt = new Prompt();
 		$prompt->setUserId($userId);
-		$prompt->setValue($value);
-		if ($timestamp === null) {
-			$timestamp = (new DateTime())->getTimestamp();
-		}
+		$prompt->setValue($value);		
 		$prompt->setTimestamp($timestamp);
 		$insertedPrompt = $this->insert($prompt);
 
