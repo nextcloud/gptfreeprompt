@@ -128,7 +128,7 @@ class PromptMapper extends QBMapper {
 		// If the prompt does not exist, cleanup and create it
 		$prompt = new Prompt();
 		$prompt->setUserId($userId);
-		$prompt->setValue($value);		
+		$prompt->setValue($value);
 		$prompt->setTimestamp($timestamp);
 		$insertedPrompt = $this->insert($prompt);
 

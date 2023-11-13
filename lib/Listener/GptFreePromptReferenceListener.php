@@ -12,9 +12,10 @@ use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\IConfig;
 use OCP\IGroupManager;
+use OCP\TextProcessing\FreePromptTaskType;
+use OCP\TextProcessing\IManager;
 use OCP\Util;
 
-#DEBUG: import logger
 use Psr\Log\LoggerInterface;
 
 class GptFreePromptReferenceListener implements IEventListener {
@@ -24,6 +25,7 @@ class GptFreePromptReferenceListener implements IEventListener {
 		private ?string $userId,
 		private LoggerInterface $logger,
 		private IGroupManager $iGroupManager,
+		private IManager $textProcessingManager,
 	) {
 
 	}
@@ -34,7 +36,13 @@ class GptFreePromptReferenceListener implements IEventListener {
 			return;
 		}
 
-		$pickerEnabled = $this->config->getAppValue(Application::APP_ID, 'picker_enabled', '1') === '1';
+		$pickerEnabled = true;
+		
+		$taskTypes = $this->textProcessingManager->getAvailableTaskTypes();
+		if (!in_array(FreePromptTaskType::class, $taskTypes)) {
+			$this->logger->debug('FreePromptTaskType not available');
+			$pickerEnabled = false;
+		}
 
 		if ($this->userId === null) {
 			$isAdmin = false;

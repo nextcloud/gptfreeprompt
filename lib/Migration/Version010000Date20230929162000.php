@@ -1,4 +1,5 @@
 <?php
+
 // SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 declare(strict_types=1);
@@ -48,7 +49,7 @@ class Version010000Date20230929162000 extends SimpleMigrationStep {
 				'notnull' => true,
 			]);
 			$table->setPrimaryKey(['id']);
-			$table->addIndex(['user_id'], 'gptfreeprompt_prompt_userid');			
+			$table->addIndex(['user_id'], 'gptfreeprompt_prompt_userid');
 		}
 
 		return $schema;
