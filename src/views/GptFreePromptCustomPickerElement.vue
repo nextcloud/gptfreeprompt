@@ -1,3 +1,7 @@
+<!--
+SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 <template>
 	<div class="gptfreeprompt-picker-content-wrapper">
 		<div v-if="!pickerEnabled" class="gptfreeprompt-picker-content">
