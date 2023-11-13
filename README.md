@@ -10,7 +10,7 @@ A Nextcloud Smart Picker integration that exposes free prompt text generation ab
 This app adds:
 - A custom SmartPicker dialog for free prompting installed GPT providers
 
-![image](https://github.com/MB-Finski/gptfreeprompt/assets/64466176/bf8adffb-bccb-4210-9eb2-8b3e984d06dd)
+![image](https://raw.githubusercontent.com/nextcloud/gptfreeprompt/main/img/screenshot_1.png)
 
 NOTE: This integration requires a separate integration to be installed that exposes a FreePromptTaskType text processing provider, like the OpenAI -integration, for example.
 
