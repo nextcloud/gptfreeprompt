@@ -34,8 +34,7 @@ class GptFreePromptReferenceProvider extends ADiscoverableReferenceProvider {
 	 * @inheritDoc
 	 */
 	public function getTitle(): string {
-		#return $this->l10n->t('AI text generation');
-		return 'AI text generation';
+		return $this->l10n->t('AI text generation');
 	}
 
 	/**

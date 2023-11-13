@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+* Added missing licensing
+* Implemented cs:fix
+
 ## 1.0.1 – 2023-10-04
 ### Fixed
 * Makefile
