@@ -177,7 +177,7 @@ class PromptMapper extends QBMapper {
 			$lastPromptTs[] = (int)$row['timestamp'];
 		}
 		$req->closeCursor();
-		$qb->resetQueryParts();
+		$qb = $this->db->getQueryBuilder();
 
 		// if we have at least 20 prompts stored, delete everything but the last 20 ones
 		if (count($lastPromptTs) === Application::MAX_STORED_PROMPTS_PER_USER) {
