@@ -3,6 +3,6 @@ OC.L10N.register(
     {
     "Preview" : "Xem trước",
     "Advanced options" : "Tùy chọn nâng cao",
-    "Send" : "Gửi"
+    "Done" : "Hoàn thành"
 },
 "nplurals=1; plural=0;");

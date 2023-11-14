@@ -1,7 +1,6 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "පෙරදසුන",
-    "Send" : "යවන්න"
+    "Preview" : "පෙරදසුන"
 },
 "nplurals=2; plural=(n != 1);");

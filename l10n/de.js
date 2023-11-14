@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Preview" : "Vorschau",
     "Advanced options" : "Erweiterte Optionen",
-    "Send" : "Senden",
+    "Done" : "Erledigt",
     "Result" : "Ergebnis"
 },
 "nplurals=2; plural=(n != 1);");

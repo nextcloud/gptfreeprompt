@@ -3,7 +3,9 @@ OC.L10N.register(
     {
     "Preview" : "Esikatselu",
     "Preview content" : "Esikatsele sisältö",
-    "Send" : "Lähetä",
+    "Show/hide advanced options" : "Näytä/piilota lisäasetukset",
+    "Advanced options" : "Lisävalinnat",
+    "Done" : "Valmis",
     "Result" : "Tulos"
 },
 "nplurals=2; plural=(n != 1);");

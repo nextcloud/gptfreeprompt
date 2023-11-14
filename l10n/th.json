@@ -1,6 +1,5 @@
 { "translations": {
     "Preview" : "ตัวอย่าง",
-    "Advanced options" : "ตัวเลือกขั้นสูง",
-    "Send" : "ส่ง"
+    "Advanced options" : "ตัวเลือกขั้นสูง"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

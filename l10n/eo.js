@@ -3,6 +3,6 @@ OC.L10N.register(
     {
     "Preview" : "Antaŭvidi",
     "Advanced options" : "Detalaj agordoj",
-    "Send" : "Sendi"
+    "Done" : "Farita"
 },
 "nplurals=2; plural=(n != 1);");

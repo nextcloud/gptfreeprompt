@@ -1,7 +1,6 @@
 { "translations": {
     "Preview" : "Previsualitza",
     "Advanced options" : "Paràmetres avançats",
-    "Send" : "Envia",
     "Result" : "Resultat"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -3,6 +3,6 @@ OC.L10N.register(
     {
     "Preview" : "Pratinjau",
     "Advanced options" : "Opsi lanjutan",
-    "Send" : "Kirim"
+    "Done" : "Selesai"
 },
 "nplurals=1; plural=0;");

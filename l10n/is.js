@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Preview" : "Forskoðun",
     "Advanced options" : "Ítarlegir valkostir",
-    "Send" : "Senda",
+    "Done" : "Lokið",
     "Result" : "Niðurstöður"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

@@ -1,7 +1,7 @@
 { "translations": {
     "Preview" : "წინასწარი ჩვენება",
     "Advanced options" : "დამატებითი ოპციონები",
-    "Send" : "გაგზავნა",
+    "Done" : "დასრულდა",
     "Result" : "შედეგი"
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

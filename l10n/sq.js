@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Preview" : "Parapamje ",
     "Advanced options" : "Opsione të avancuara",
-    "Send" : "Dërgo",
+    "Done" : "U bë",
     "Result" : "Rezultatet"
 },
 "nplurals=2; plural=(n != 1);");

@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Preview" : "წინასწარი ჩვენება",
     "Advanced options" : "დამატებითი ოპციონები",
-    "Send" : "გაგზავნა",
+    "Done" : "დასრულდა",
     "Result" : "შედეგი"
 },
 "nplurals=2; plural=(n!=1);");

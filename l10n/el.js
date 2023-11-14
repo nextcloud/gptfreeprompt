@@ -5,7 +5,7 @@ OC.L10N.register(
     "Preview content" : "Προεπισκόπηση περιεχομένου",
     "Show/hide advanced options" : "Εμφάνιση/απόκρυψη προηγμένων επιλογών",
     "Advanced options" : "Επιλογές για προχωρημένους",
-    "Send" : "Αποστολή",
+    "Done" : "Ολοκληρώθηκε",
     "Result" : "Αποτέλεσμα"
 },
 "nplurals=2; plural=(n != 1);");

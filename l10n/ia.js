@@ -3,6 +3,6 @@ OC.L10N.register(
     {
     "Preview" : "Previsualisar",
     "Advanced options" : "Optiones avantiate",
-    "Send" : "Inviar"
+    "Done" : "Preste"
 },
 "nplurals=2; plural=(n != 1);");

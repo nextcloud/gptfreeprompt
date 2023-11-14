@@ -4,7 +4,7 @@ OC.L10N.register(
     "Preview" : "Aurrebista",
     "Show/hide advanced options" : "Erakutsi/ezkutatu aukera aurreratuak",
     "Advanced options" : "Ezarpen aurreratuak",
-    "Send" : "Bidali",
+    "Done" : "Egina",
     "Regenerate" : "Berriro sortu",
     "Result" : "Emaitza"
 },
