@@ -1,6 +1,6 @@
 { "translations": {
     "AI text generation" : "IA de xeración de texto",
-    "GptFreePrompt" : "Indicador GPT de balde",
+    "GptFreePrompt" : "Indicador GptFree",
     "A SmartPicker for interfacing with the GPT integrations that provide free prompt cabability" : "Un Selector intelixente para interactuar coas integracións de GPT que fornezan a posibilidade de indicación de balde.",
     "A unified SmartPicker for Nextcloud large language model integrations that provide free prompting cabability." : "Un selector intelixente unificado para integracións de grandes modelos idiomas de Nextcloud que fornezan a posibilidade de indicación de balde.",
     "ERROR: No free prompt provider available" : "ERRO: non hai ningún fornecedor de indicacións de balde dispoñíbel",
