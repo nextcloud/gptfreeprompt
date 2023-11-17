@@ -18,7 +18,7 @@ OC.L10N.register(
     "What is the matter with putting pineapple on pizza?" : "Que problema hai en poñer ananás na pizza?",
     "Regenerate" : "Rexenerar",
     "Text generation error" : "Produciuse un erro na xeración de texto",
-    "Unknown text generation API error" : "Produciuse un errodescoñecido na API de xeración de texto",
+    "Unknown text generation API error" : "Produciuse un erro descoñecido na API de xeración de texto",
     "Prompt" : "Indicación",
     "Result" : "Resultado",
     "Result {index}" : "Resultado {index}"
