@@ -1,7 +1,7 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "AI text generation" : "KI-Textgenerierung\n \n \n ",
+    "AI text generation" : "KI-Texterstellung\n \n \n ",
     "GptFreePrompt" : "GptFreePrompt",
     "A SmartPicker for interfacing with the GPT integrations that provide free prompt cabability" : "Ein SmartPick für die Verbindung mit den GPT-Integrationen, die kostenlose Eingabeaufforderungsfunktionen bieten",
     "A unified SmartPicker for Nextcloud large language model integrations that provide free prompting cabability." : "Ein einheitlicher SmartPick für Nextcloud-Integrationen mit großen Sprachmodellen, der kostenlose Eingabeaufforderungsfunktionen bietet.",
@@ -17,8 +17,8 @@ OC.L10N.register(
     "How many results to generate" : "Wieviele Ergebnisse erstellt werden sollen",
     "What is the matter with putting pineapple on pizza?" : "Was ist das Problem mit Ananas auf einer Pizza?",
     "Regenerate" : "Neu erstellen",
-    "Text generation error" : "Fehler bei der Textgenerierung",
-    "Unknown text generation API error" : "Unbekannter API-Fehler bei der Textgenerierung",
+    "Text generation error" : "Fehler bei der Texterstellung",
+    "Unknown text generation API error" : "Unbekannter API-Fehler bei der Texterstellung",
     "Prompt" : "Prompt",
     "Result" : "Ergebnis",
     "Result {index}" : "Ergebnis {index}"
