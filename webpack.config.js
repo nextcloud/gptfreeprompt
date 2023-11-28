@@ -19,6 +19,7 @@ webpackConfig.stats = {
 const appId = 'gptfreeprompt'
 webpackConfig.entry = {
 	reference: { import: path.join(__dirname, 'src', 'reference.js'), filename: appId + '-reference.js' },
+	generationPage: { import: path.join(__dirname, 'src', 'generationPage.js'), filename: appId + '-generationPage.js' },
 	// adminSettings: { import: path.join(__dirname, 'src', 'adminSettings.js'), filename: appId + '-adminSettings.js' },
 }
 
