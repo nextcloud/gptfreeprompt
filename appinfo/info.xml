@@ -18,6 +18,6 @@
     <bugs>https://github.com/nextcloud/gptfreeprompt/issues</bugs>
     <screenshot>https://raw.githubusercontent.com/nextcloud/gptfreeprompt/main/img/screenshot_1.png</screenshot>
     <dependencies>
-        <nextcloud min-version="27.1.0" max-version="28"/>
+        <nextcloud min-version="28" max-version="28"/>
     </dependencies>
 </info>
