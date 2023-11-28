@@ -12,15 +12,13 @@ use OCP\DB\Types;
 use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
-class Version010002Date20231113133200 extends SimpleMigrationStep
-{
+class Version010002Date20231113133200 extends SimpleMigrationStep {
 	/**
 	 * @param IOutput $output
 	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
 	 * @param array $options
 	 */
-	public function preSchemaChange(IOutput $output, Closure $schemaClosure, array $options)
-	{
+	public function preSchemaChange(IOutput $output, Closure $schemaClosure, array $options) {
 	}
 
 	/**
@@ -29,8 +27,7 @@ class Version010002Date20231113133200 extends SimpleMigrationStep
 	 * @param array $options
 	 * @return null|ISchemaWrapper
 	 */
-	public function changeSchema(IOutput $output, Closure $schemaClosure, array $options)
-	{
+	public function changeSchema(IOutput $output, Closure $schemaClosure, array $options) {
 		/** @var ISchemaWrapper $schema */
 		$schema = $schemaClosure();
 
@@ -76,7 +73,7 @@ class Version010002Date20231113133200 extends SimpleMigrationStep
 				Types::STRING,
 				[
 					'notnull' => true,
-					'length' => 4000				
+					'length' => 4000
 				]
 			);
 			$table->addColumn(
@@ -129,7 +126,6 @@ class Version010002Date20231113133200 extends SimpleMigrationStep
 	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
 	 * @param array $options
 	 */
-	public function postSchemaChange(IOutput $output, Closure $schemaClosure, array $options)
-	{
+	public function postSchemaChange(IOutput $output, Closure $schemaClosure, array $options) {
 	}
 }

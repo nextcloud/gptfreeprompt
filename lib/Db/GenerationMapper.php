@@ -7,20 +7,17 @@ declare(strict_types=1);
 
 namespace OCA\GptFreePrompt\Db;
 
-use DateTime;
 use OCA\GptFreePrompt\AppInfo\Application;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\Exception;
-use RuntimeException;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
+use RuntimeException;
 
-class GenerationMapper extends QBMapper
-{
-	public function __construct(IDBConnection $db)
-	{
+class GenerationMapper extends QBMapper {
+	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'gptfreeprompt_gens', Generation::class);
 	}
 
@@ -31,8 +28,7 @@ class GenerationMapper extends QBMapper
 	 * @throws Exception
 	 * @throws MultipleObjectsReturnedException
 	 */
-	public function getGeneration(int $id): Generation
-	{
+	public function getGeneration(int $id): Generation {
 		$qb = $this->db->getQueryBuilder();
 
 		$qb->select('*')
@@ -50,8 +46,7 @@ class GenerationMapper extends QBMapper
 	 * @throws DoesNotExistException
 	 * @throws \OCP\Db\Exception
 	 */
-	public function getGenerationsByGenId(string $genId): array
-	{
+	public function getGenerationsByGenId(string $genId): array {
 		$qb = $this->db->getQueryBuilder();
 
 		$qb->select('*')
@@ -70,8 +65,7 @@ class GenerationMapper extends QBMapper
 	 * @throws \OCP\Db\Exception
 	 * @throws DoesNotExistException
 	 */
-	public function getGenerationsByUserAndGenId(string $userId, string $genId): array
-	{
+	public function getGenerationsByUserAndGenId(string $userId, string $genId): array {
 		$qb = $this->db->getQueryBuilder();
 
 		$qb->select('*')
@@ -93,8 +87,7 @@ class GenerationMapper extends QBMapper
 	 * @throws \OCP\Db\Exception
 	 * @throws RuntimeException
 	 */
-	public function cleanupGenerations(): void
-	{
+	public function cleanupGenerations(): void {
 		$qb = $this->db->getQueryBuilder();
 
 		// Delete all generations that are older than DEFAULT_GENERATION_STORAGE_TIME

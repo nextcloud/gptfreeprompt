@@ -7,15 +7,15 @@ namespace OCA\GptFreePrompt\AppInfo;
 
 use OCA\GptFreePrompt\Listener\GptFreePromptReferenceListener;
 use OCA\GptFreePrompt\Listener\GptFreePromptResultListener;
-use OCA\GptFreePrompt\Reference\GptFreePromptReferenceProvider;
 use OCA\GptFreePrompt\Notification\GptFreePromptNotifier;
+use OCA\GptFreePrompt\Reference\GptFreePromptReferenceProvider;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\Collaboration\Reference\RenderReferenceEvent;
-use OCP\TextProcessing\Events\TaskSuccessfulEvent;
 use OCP\TextProcessing\Events\TaskFailedEvent;
+use OCP\TextProcessing\Events\TaskSuccessfulEvent;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'gptfreeprompt';

@@ -5,24 +5,24 @@
 
 namespace OCA\GptFreePrompt\Service;
 
+use DateTime;
 use Exception;
-use OCP\AppFramework\Http;
-use OCP\AppFramework\Db\DoesNotExistException;
 use OCA\GptFreePrompt\AppInfo\Application;
+use OCA\GptFreePrompt\Db\Generation;
+use OCA\GptFreePrompt\Db\GenerationMapper;
 use OCA\GptFreePrompt\Db\PromptMapper;
+use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\AppFramework\Http;
+use OCP\DB\Exception as DBException;
 use OCP\IConfig;
+use OCP\IL10N;
+use OCP\Notification\IManager as INotificationManager;
+use OCP\PreConditionNotMetException;
+use OCP\TextProcessing\Exception\TaskFailureException;
 use OCP\TextProcessing\FreePromptTaskType;
 use OCP\TextProcessing\IManager;
 use OCP\TextProcessing\Task;
 use Psr\Log\LoggerInterface;
-use OCP\TextProcessing\Exception\TaskFailureException;
-use OCP\PreConditionNotMetException;
-use OCP\DB\Exception as DBException;
-use OCA\GptFreePrompt\Db\GenerationMapper;
-use OCA\GptFreePrompt\Db\Generation;
-use OCP\IL10N;
-use OCP\Notification\IManager as INotificationManager;
-use DateTime;
 
 class GptFreePromptService {
 	public function __construct(
@@ -56,8 +56,11 @@ class GptFreePromptService {
 			$genId = (string) bin2hex(random_bytes(32));
 			// Exceedingly unlikely that this will ever happen, but just in case:
 			try {
-				if(count($this->generationMapper->getGenerationsByGenId($genId)) ===0) break;
-				else continue;
+				if(count($this->generationMapper->getGenerationsByGenId($genId)) === 0) {
+					break;
+				} else {
+					continue;
+				}
 			} catch (DoesNotExistException) {
 				break;
 			} catch (DBException $e) {
@@ -84,8 +87,8 @@ class GptFreePromptService {
 
 			# Run or schedule the task:
 			try {
-				$this->textProcessingManager->runOrScheduleTask($promptTask);				
-			} catch ( DBException | PreConditionNotMetException | TaskFailureException $e) {
+				$this->textProcessingManager->runOrScheduleTask($promptTask);
+			} catch (DBException | PreConditionNotMetException | TaskFailureException $e) {
 				$this->logger->warning('Failed to run or schedule a task', ['exception' => $e]);
 				throw new Exception($this->l10n->t('Failed to run or schedule a task'), Http::STATUS_INTERNAL_SERVER_ERROR);
 			}
@@ -95,13 +98,13 @@ class GptFreePromptService {
 			if ($taskStatus === Task::STATUS_SUCCESSFUL) {
 				$newGeneration->setStatus(Generation::STATUS_SUCCESS);
 				$newGeneration->setValue($promptTask->getOutput());
-				$newGeneration->setCompletionTime((new DateTime('now'))->getTimestamp());				
+				$newGeneration->setCompletionTime((new DateTime('now'))->getTimestamp());
 				
 			} elseif ($taskStatus === Task::STATUS_RUNNING | Task::STATUS_SCHEDULED) {
 				// Task was scheduled or is running, so we need to wait for it to finish
 				// and process the result in the event listener.
 				$completionExpAt = ($promptTask->getCompletionExpectedAt() ?? new DateTime('now'))->getTimestamp();
-				$newGeneration->setCompletionTime($completionExpAt);	
+				$newGeneration->setCompletionTime($completionExpAt);
 			} else {
 				// Task failed
 				$newGeneration->setStatus(Generation::STATUS_FAILED);
@@ -118,8 +121,9 @@ class GptFreePromptService {
 		}
 
 		# Save prompt to database
-		if ($this->userId !== null)
+		if ($this->userId !== null) {
 			$this->promptMapper->createPrompt($this->userId, $prompt);
+		}
 
 		return $genId;
 	}
@@ -244,7 +248,7 @@ class GptFreePromptService {
 		}
 		
 		try {
-			$generations = $this->generationMapper->getGenerationsByUserAndGenId($this->userId,$genId);
+			$generations = $this->generationMapper->getGenerationsByUserAndGenId($this->userId, $genId);
 			if (count($generations) === 0) {
 				throw new DoesNotExistException('');
 			}
@@ -304,7 +308,7 @@ class GptFreePromptService {
 		}
 		
 		try {
-			$generations = $this->generationMapper->getGenerationsByUserAndGenId($this->userId,$genId);
+			$generations = $this->generationMapper->getGenerationsByUserAndGenId($this->userId, $genId);
 			if (count($generations) === 0) {
 				throw new DoesNotExistException('');
 			}

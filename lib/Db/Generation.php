@@ -77,6 +77,6 @@ class Generation extends Entity implements \JsonSerializable {
 
 	// Specify php bool compatible boolean setters
 	public function setNotify(?bool $notify): void {
-		$this->setter('notify', [$notify ? 1 : null]);		
+		$this->setter('notify', [$notify ? 1 : null]);
 	}
 }

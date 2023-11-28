@@ -5,16 +5,16 @@
 
 namespace OCA\GptFreePrompt\Controller;
 
+use Exception;
+use OCA\GptFreePrompt\AppInfo\Application;
 use OCA\GptFreePrompt\Service\GptFreePromptService;
 use OCP\AppFramework\Controller;
-use OCA\GptFreePrompt\AppInfo\Application;
+use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\BruteForceProtection;
 use OCP\AppFramework\Http\DataResponse;
-use OCP\IRequest;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Services\IInitialState;
-use Exception;
-use OCP\AppFramework\Http\Attribute\BruteForceProtection;
-use OCP\AppFramework\Http;
+use OCP\IRequest;
 
 class GptFreePromptController extends Controller {
 	public function __construct(
@@ -62,7 +62,7 @@ class GptFreePromptController extends Controller {
 	/**
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
-	 * 
+	 *
 	 * @param string $genId
 	 * @return DataResponse
 	 */
@@ -73,8 +73,8 @@ class GptFreePromptController extends Controller {
 		} catch (Exception $e) {
 			$response = new DataResponse(['error' => $e->getMessage()], $e->getCode());
 			if($e->getCode() === Http::STATUS_BAD_REQUEST) {
-				// Throttle brute force attempts				
-				$response->throttle(['action' => 'genId']);				
+				// Throttle brute force attempts
+				$response->throttle(['action' => 'genId']);
 			}
 			return $response;
 		}
@@ -84,9 +84,9 @@ class GptFreePromptController extends Controller {
 	/**
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
-	 * 
+	 *
 	 * No need for bruteforce protection since the user can only cancel their own generations
-	 * 
+	 *
 	 * @param string $genId
 	 * @return DataResponse
 	 */
@@ -103,9 +103,9 @@ class GptFreePromptController extends Controller {
 	/**
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
-	 * 
+	 *
 	 * No need for bruteforce protection since the user can only set the notifications on their own generations
-	 * 
+	 *
 	 * @param string $genId
 	 * @param bool $notify
 	 * @return DataResponse
@@ -144,5 +144,5 @@ class GptFreePromptController extends Controller {
 
 		return new TemplateResponse(Application::APP_ID, 'generationPage');
 	}
-	
+
 }

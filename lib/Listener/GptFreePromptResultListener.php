@@ -1,34 +1,35 @@
 <?php
+
+// SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
+// SPDX-License-Identifier: AGPL-3.0-or-later
 namespace OCA\GptFreePrompt\Listener;
 
 use InvalidArgumentException;
 use OCA\GptFreePrompt\AppInfo\Application;
-use OCA\GptFreePrompt\Db\GenerationMapper;
 use OCA\GptFreePrompt\Db\Generation;
+use OCA\GptFreePrompt\Db\GenerationMapper;
 use OCA\GptFreePrompt\Service\GptFreePromptService;
 use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\EventDispatcher\Event;
+use OCP\EventDispatcher\IEventListener;
 use OCP\TextProcessing\Events\AbstractTextProcessingEvent;
 use OCP\TextProcessing\Events\TaskFailedEvent;
 use OCP\TextProcessing\Events\TaskSuccessfulEvent;
-use OCP\EventDispatcher\Event;
-use OCP\EventDispatcher\IEventListener;
 use Psr\Log\LoggerInterface;
 
-class GptFreePromptResultListener implements IEventListener
-{
+class GptFreePromptResultListener implements IEventListener {
 
-    public function __construct(
-        private GenerationMapper $generationMapper,
+	public function __construct(
+		private GenerationMapper $generationMapper,
 		private LoggerInterface $logger,
 		private GptFreePromptService $gptFreePromptService
-    ) {
-    }
-    public function handle(Event $event): void
-    {
+	) {
+	}
+	public function handle(Event $event): void {
 
 		if (!$event instanceof AbstractTextProcessingEvent || $event->getTask()->getAppId() !== Application::APP_ID) {
-            return;
-        }
+			return;
+		}
 
 		$genId = $event->getTask()->getIdentifier();
 
@@ -55,13 +56,13 @@ class GptFreePromptResultListener implements IEventListener
 			return;
 		}
 
-        if ($event instanceof TaskSuccessfulEvent) {
-            $output = $event->getTask()->getOutput();
-            
+		if ($event instanceof TaskSuccessfulEvent) {
+			$output = $event->getTask()->getOutput();
+			
 
-            $generation->setValue($output);
-            $generation->setStatus(Generation::STATUS_SUCCESS);
-            try {
+			$generation->setValue($output);
+			$generation->setStatus(Generation::STATUS_SUCCESS);
+			try {
 				$generation = $this->generationMapper->update($generation);
 			} catch (\OCP\DB\Exception | InvalidArgumentException $e) {
 				$this->logger->warning('Error while saving generation: ' . $e->getMessage());
@@ -77,11 +78,11 @@ class GptFreePromptResultListener implements IEventListener
 				}
 				
 				return;
-			}			
+			}
 
-            $this->gptFreePromptService->notifyUser($generation);
-        } elseif ($event instanceof TaskFailedEvent) {
-            $generations = $this->generationMapper->getGenerationsByGenId($genId);
+			$this->gptFreePromptService->notifyUser($generation);
+		} elseif ($event instanceof TaskFailedEvent) {
+			$generations = $this->generationMapper->getGenerationsByGenId($genId);
 
 			// Find the first generation that is not yet completed
 			$generation = null;
@@ -98,12 +99,12 @@ class GptFreePromptResultListener implements IEventListener
 				return;
 			}
 
-            $generation->setStatus(Generation::STATUS_FAILED);
-            $this->generationMapper->update($generation);
+			$generation->setStatus(Generation::STATUS_FAILED);
+			$this->generationMapper->update($generation);
 
-            // TODO:
-            // Send notification to user
-        }
+			// TODO:
+			// Send notification to user
+		}
 
-    }
+	}
 }
