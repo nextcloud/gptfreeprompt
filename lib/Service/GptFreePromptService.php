@@ -144,6 +144,15 @@ class GptFreePromptService {
 
 		$notification = $this->notificationManager->createNotification();
 
+		$notification->setApp(Application::APP_ID)
+			->setUser($generation->getUserId())
+			->setObject('gptfreeprompt', $generation->getGenId());
+
+		if ($this->notificationManager->getCount($notification) > 0) {
+			// Notification already exists, don't create a new one
+			return;
+		}
+
 		$viewAction = $notification->createAction();
 		$viewAction->setLabel('view')
 			->setLink(Application::APP_ID, 'WEB');
@@ -152,19 +161,11 @@ class GptFreePromptService {
 		$deleteAction->setLabel('delete')
 				->setLink(Application::APP_ID, 'POST');
 
-		$notification->setApp(Application::APP_ID)
-			->setUser($generation->getUserId())
-			->setDateTime(new DateTime('now'))
-			->setObject('gptfreeprompt', $generation->getGenId())
+		$notification->setDateTime(new DateTime('now'))
 			->setSubject('gptfreeprompt')
 			->setMessage('gptfreeprompt', ['genId' => $generation->getGenId(), 'prompt' => $generation->getPrompt()])
 			->addAction($deleteAction)
 			->addAction($viewAction);
-
-		if($this->notificationManager->getCount($notification) > 0) {
-			// Notification already exists, so don't send a new one
-			return;
-		}
 
 		try {
 			$this->notificationManager->notify($notification);
