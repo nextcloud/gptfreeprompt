@@ -100,7 +100,7 @@ class GptFreePromptService {
 				$newGeneration->setValue($promptTask->getOutput());
 				$newGeneration->setCompletionTime((new DateTime('now'))->getTimestamp());
 				
-			} elseif ($taskStatus === Task::STATUS_RUNNING | Task::STATUS_SCHEDULED) {
+			} elseif ($taskStatus === Task::STATUS_RUNNING || $taskStatus === Task::STATUS_SCHEDULED) {
 				// Task was scheduled or is running, so we need to wait for it to finish
 				// and process the result in the event listener.
 				$completionExpAt = ($promptTask->getCompletionExpectedAt() ?? new DateTime('now'))->getTimestamp();
@@ -108,7 +108,6 @@ class GptFreePromptService {
 			} else {
 				// Task failed
 				$newGeneration->setStatus(Generation::STATUS_FAILED);
-				$this->generationMapper->insert($newGeneration);
 			}
 
 			try {
