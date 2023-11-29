@@ -161,6 +161,11 @@ class GptFreePromptService {
 			->addAction($deleteAction)
 			->addAction($viewAction);
 
+		if($this->notificationManager->getCount($notification) > 0) {
+			// Notification already exists, so don't send a new one
+			return;
+		}
+
 		try {
 			$this->notificationManager->notify($notification);
 		} catch (\InvalidArgumentException $e) {
