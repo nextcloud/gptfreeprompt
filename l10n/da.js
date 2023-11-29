@@ -1,9 +1,9 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Forhåndsvisning",
+    "Result" : "Resultat",
     "Advanced options" : "Avancerede indstillinger",
     "Done" : "Færdig",
-    "Result" : "Resultat"
+    "Preview" : "Forhåndsvisning"
 },
 "nplurals=2; plural=(n != 1);");

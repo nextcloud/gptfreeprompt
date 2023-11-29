@@ -1,6 +1,6 @@
 { "translations": {
-    "Preview" : "Antaŭvidi",
     "Advanced options" : "Detalaj agordoj",
-    "Done" : "Farita"
+    "Done" : "Farita",
+    "Preview" : "Antaŭvidi"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

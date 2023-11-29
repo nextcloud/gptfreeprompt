@@ -1,5 +1,13 @@
 { "translations": {
-    "Preview" : "Apercebut",
-    "Advanced options" : "Opcions avançadas"
+    "View" : "Veire",
+    "Delete" : "Suprimir",
+    "Success" : "Succès",
+    "Failed" : "Fracàs",
+    "Processing" : "Tractament",
+    "Deleted" : "Suprimit",
+    "Unknown" : "Desconegut",
+    "Reset" : "Reïnicializar",
+    "Advanced options" : "Opcions avançadas",
+    "Preview" : "Apercebut"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

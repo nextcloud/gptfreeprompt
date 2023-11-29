@@ -1,8 +1,9 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Previsualitza",
+    "Result" : "Resultat",
     "Advanced options" : "Paràmetres avançats",
-    "Result" : "Resultat"
+    "Done" : "Desat",
+    "Preview" : "Previsualitza"
 },
 "nplurals=2; plural=(n != 1);");

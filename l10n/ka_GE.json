@@ -1,7 +1,11 @@
 { "translations": {
-    "Preview" : "წინასწარი ჩვენება",
+    "Delete" : "წაშლა",
+    "Processing" : "პროცესირება",
+    "Unknown" : "უცნობია",
+    "Reset" : "საწყის მდოგმარეობაში დაბრუნება",
+    "Result" : "შედეგი",
     "Advanced options" : "დამატებითი ოპციონები",
     "Done" : "დასრულდა",
-    "Result" : "შედეგი"
+    "Preview" : "წინასწარი ჩვენება"
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

@@ -1,11 +1,14 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Esikatselu",
-    "Preview content" : "Esikatsele sisältö",
+    "Delete" : "Poista",
+    "Success" : "Onnistui",
+    "Unknown" : "Tuntematon",
+    "Reset" : "Palauta",
+    "Result" : "Tulos",
     "Show/hide advanced options" : "Näytä/piilota lisäasetukset",
     "Advanced options" : "Lisävalinnat",
     "Done" : "Valmis",
-    "Result" : "Tulos"
+    "Preview" : "Esikatselu"
 },
 "nplurals=2; plural=(n != 1);");

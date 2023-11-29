@@ -1,7 +1,7 @@
 { "translations": {
-    "Preview" : "Forhåndsvisning",
+    "Result" : "Resultat",
     "Advanced options" : "Avancerede indstillinger",
     "Done" : "Færdig",
-    "Result" : "Resultat"
+    "Preview" : "Forhåndsvisning"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

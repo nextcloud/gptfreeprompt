@@ -1,9 +1,13 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "წინასწარი ჩვენება",
+    "Delete" : "წაშლა",
+    "Processing" : "პროცესირება",
+    "Unknown" : "უცნობია",
+    "Reset" : "საწყის მდოგმარეობაში დაბრუნება",
+    "Result" : "შედეგი",
     "Advanced options" : "დამატებითი ოპციონები",
     "Done" : "დასრულდა",
-    "Result" : "შედეგი"
+    "Preview" : "წინასწარი ჩვენება"
 },
 "nplurals=2; plural=(n!=1);");

@@ -1,9 +1,17 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Voorbeeld",
+    "View" : "Bekijken",
+    "Delete" : "Verwijder",
+    "Success" : "Geslaagd",
+    "Failed" : "Mislukt",
+    "Processing" : "Verwerken",
+    "Deleted" : "Verwijderd",
+    "Unknown" : "Onbekend",
+    "Reset" : "Herstellen",
+    "Result" : "Resultaat",
     "Advanced options" : "Geavanceerde opties",
     "Done" : "Klaar",
-    "Result" : "Resultaat"
+    "Preview" : "Voorbeeld"
 },
 "nplurals=2; plural=(n != 1);");

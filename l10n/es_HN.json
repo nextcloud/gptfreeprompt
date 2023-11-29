@@ -1,6 +1,8 @@
 { "translations": {
-    "Preview" : "Previsualizar",
+    "Delete" : "Borrar",
+    "Reset" : "Restablecer",
+    "Result" : "Resultado",
     "Advanced options" : "Opciones avanzadas",
-    "Result" : "Resultado"
+    "Preview" : "Previsualizar"
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

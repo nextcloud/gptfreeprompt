@@ -1,7 +1,7 @@
 { "translations": {
-    "Preview" : "Vorschau",
+    "Result" : "Ergebnis",
     "Advanced options" : "Erweiterte Optionen",
     "Done" : "Erledigt",
-    "Result" : "Ergebnis"
+    "Preview" : "Vorschau"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

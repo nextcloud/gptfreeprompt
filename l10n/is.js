@@ -1,9 +1,14 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Forskoðun",
+    "Delete" : "Eyða",
+    "Success" : "Tókst",
+    "Processing" : "Í vinnslu",
+    "Unknown" : "Óþekkt",
+    "Reset" : "Endurstilla",
+    "Result" : "Niðurstöður",
     "Advanced options" : "Ítarlegir valkostir",
     "Done" : "Lokið",
-    "Result" : "Niðurstöður"
+    "Preview" : "Forskoðun"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

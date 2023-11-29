@@ -1,8 +1,8 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Antaŭvidi",
     "Advanced options" : "Detalaj agordoj",
-    "Done" : "Farita"
+    "Done" : "Farita",
+    "Preview" : "Antaŭvidi"
 },
 "nplurals=2; plural=(n != 1);");

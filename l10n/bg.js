@@ -1,16 +1,15 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Визуализация",
-    "Preview content" : "Предварителен преглед на съдържанието",
+    "Prompt" : "Подкана",
+    "Result" : "Резултат",
+    "Result {index}" : "Резултат {index}",
     "Show/hide advanced options" : "Показване/скриване на разширени опции",
     "Advanced options" : "Допълнителни опции",
-    "Include the prompt in the result" : "Включване на подканата в резултата",
+    "Done" : "Завършено",
     "How many results to generate" : "Колко резултата да се генерират",
     "What is the matter with putting pineapple on pizza?" : "Какъв е проблемът с добавянето на ананас върху пицата?",
     "Regenerate" : "Регенериране",
-    "Prompt" : "Подкана",
-    "Result" : "Резултат",
-    "Result {index}" : "Резултат {index}"
+    "Preview" : "Визуализация"
 },
 "nplurals=2; plural=(n != 1);");

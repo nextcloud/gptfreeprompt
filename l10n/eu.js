@@ -1,11 +1,15 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Aurrebista",
+    "Delete" : "Ezabatu",
+    "Success" : "Arrakasta",
+    "Unknown" : "Ezezaguna",
+    "Reset" : "Berrezarri",
+    "Result" : "Emaitza",
     "Show/hide advanced options" : "Erakutsi/ezkutatu aukera aurreratuak",
     "Advanced options" : "Ezarpen aurreratuak",
     "Done" : "Egina",
     "Regenerate" : "Berriro sortu",
-    "Result" : "Emaitza"
+    "Preview" : "Aurrebista"
 },
 "nplurals=2; plural=(n != 1);");

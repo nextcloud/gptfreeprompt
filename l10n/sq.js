@@ -1,9 +1,15 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
-    "Preview" : "Parapamje ",
+    "View" : "Shiko",
+    "Delete" : "Fshi",
+    "Processing" : "Në përpunim",
+    "Deleted" : "E fshirë",
+    "Unknown" : "I panjohur",
+    "Reset" : "Rivendos",
+    "Result" : "Rezultatet",
     "Advanced options" : "Opsione të avancuara",
     "Done" : "U bë",
-    "Result" : "Rezultatet"
+    "Preview" : "Parapamje "
 },
 "nplurals=2; plural=(n != 1);");
