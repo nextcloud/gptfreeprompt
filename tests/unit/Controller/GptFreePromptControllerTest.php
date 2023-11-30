@@ -69,7 +69,7 @@ class GptFreePromptControllerTest extends TestCase
 			$sc->getL10N($c->get('AppName')),
 			\OC::$server->get(INotificationManager::class)
 		);
-		$this->appManager = $this->createMock(IAppManager::class);
+		$this->appManager = \OC::$server->get(IAppManager::class);
 
 		$this->appManager->enableApp('testing');
 		
