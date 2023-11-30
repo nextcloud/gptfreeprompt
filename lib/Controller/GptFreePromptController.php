@@ -52,7 +52,7 @@ class GptFreePromptController extends Controller {
 	 */
 	public function getPromptHistory(): DataResponse {
 		try {
-			$result = $this->gptFreePromptService->getPromptHistory($this->userId);
+			$result = $this->gptFreePromptService->getPromptHistory();
 		} catch (Exception $e) {
 			return new DataResponse(['error' => $e->getMessage()], $e->getCode());
 		}

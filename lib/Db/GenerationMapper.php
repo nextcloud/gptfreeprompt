@@ -80,7 +80,22 @@ class GenerationMapper extends QBMapper {
 		return $this->findEntities($qb);
 	}
 
-	 
+	/**
+	 * Delete all generations of a user
+	 * @param string $userId
+	 * @return void
+	 * @throws \OCP\Db\Exception
+	 */
+	public function deleteGenerationsByUser(string $userId): void {
+		$qb = $this->db->getQueryBuilder();
+
+		$qb->delete($this->getTableName())
+			->where(
+				$qb->expr()->eq('user_id', $qb->createNamedParameter($userId, IQueryBuilder::PARAM_STR))
+			);
+
+		$qb->executeStatement();
+	}
 
 	/**
 	 * @return void
@@ -97,6 +112,6 @@ class GenerationMapper extends QBMapper {
 			);
 
 
-		$qb->executeQuery();
+		$qb->executeStatement();
 	}
 }

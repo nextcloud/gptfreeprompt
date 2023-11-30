@@ -227,6 +227,7 @@ export default {
 						: multiAnswers.join('\n\n')
 				}
 			}
+			this.$emit('update:result', this.result)
 		},
 
 		onIncludePromptToggle() {

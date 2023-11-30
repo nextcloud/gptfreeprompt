@@ -70,18 +70,16 @@ class Version010002Date20231113133200 extends SimpleMigrationStep {
 			);
 			$table->addColumn(
 				'prompt',
-				Types::STRING,
+				Types::TEXT,
 				[
 					'notnull' => true,
-					'length' => 4000
 				]
 			);
 			$table->addColumn(
 				'value',
-				Types::STRING,
+				Types::TEXT,
 				[
 					'notnull' => true,
-					'length' => 4000
 				]
 			);
 			$table->addColumn(

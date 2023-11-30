@@ -176,13 +176,12 @@ class GptFreePromptService {
 	}
 
 	/**
-	 * @param string $userId
 	 * @return array
 	 * @throws Exception
 	 */
-	public function getPromptHistory(string $userId): array {
+	public function getPromptHistory(): array {
 		try {
-			return $this->promptMapper->getPromptsOfUser($userId);
+			return $this->promptMapper->getPromptsOfUser($this->userId);
 		} catch (DBException $e) {
 			$this->logger->warning('Failed to get prompts of user', ['exception' => $e]);
 			throw new Exception($this->l10n->t('Failed to get prompt history'), Http::STATUS_INTERNAL_SERVER_ERROR);
