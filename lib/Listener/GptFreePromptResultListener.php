@@ -17,6 +17,9 @@ use OCP\TextProcessing\Events\TaskFailedEvent;
 use OCP\TextProcessing\Events\TaskSuccessfulEvent;
 use Psr\Log\LoggerInterface;
 
+/**
+ * @implements IEventListener<Event>
+ */
 class GptFreePromptResultListener implements IEventListener {
 
 	public function __construct(
@@ -57,12 +60,13 @@ class GptFreePromptResultListener implements IEventListener {
 		}
 
 		if ($event instanceof TaskSuccessfulEvent) {
-			$output = $event->getTask()->getOutput();
+			$output = $event->getTask()->getOutput() ?? '';
 			
 
 			$generation->setValue($output);
 			$generation->setStatus(Generation::STATUS_SUCCESS);
 			try {
+				/** @var Generation $generation */
 				$generation = $this->generationMapper->update($generation);
 			} catch (\OCP\DB\Exception | InvalidArgumentException $e) {
 				$this->logger->warning('Error while saving generation: ' . $e->getMessage());
@@ -71,7 +75,7 @@ class GptFreePromptResultListener implements IEventListener {
 				$generation->setStatus(Generation::STATUS_FAILED);
 				$generation->setValue('');
 				try {
-					$generation = $this->generationMapper->update($generation);
+					$this->generationMapper->update($generation);
 				} catch (\OCP\DB\Exception | InvalidArgumentException $e) {
 					$this->logger->warning('Error while setting generation as failed: ' . $e->getMessage());
 					return;

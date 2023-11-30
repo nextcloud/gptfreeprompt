@@ -53,7 +53,7 @@ class GptFreePromptService {
 		
 		# Generate a unique id for this generation
 		while (true) {
-			$genId = (string) bin2hex(random_bytes(32));
+			$genId = bin2hex(random_bytes(32));
 			// Exceedingly unlikely that this will ever happen, but just in case:
 			try {
 				if(count($this->generationMapper->getGenerationsByGenId($genId)) === 0) {
@@ -69,7 +69,6 @@ class GptFreePromptService {
 			}
 		}
 
-		$result = [];
 		# Generate nResults prompts
 		for ($i = 0; $i < $nResults; $i++) {
 			
@@ -97,7 +96,7 @@ class GptFreePromptService {
 
 			if ($taskStatus === Task::STATUS_SUCCESSFUL) {
 				$newGeneration->setStatus(Generation::STATUS_SUCCESS);
-				$newGeneration->setValue($promptTask->getOutput());
+				$newGeneration->setValue($promptTask->getOutput() ?? '');
 				$newGeneration->setCompletionTime((new DateTime('now'))->getTimestamp());
 				
 			} elseif ($taskStatus === Task::STATUS_RUNNING || $taskStatus === Task::STATUS_SCHEDULED) {
@@ -180,6 +179,11 @@ class GptFreePromptService {
 	 * @throws Exception
 	 */
 	public function getPromptHistory(): array {
+		if ($this->userId === null) {
+			$this->logger->warning('User id is null when trying to get prompt history');
+			throw new Exception($this->l10n->t('Failed to get prompt history'), Http::STATUS_INTERNAL_SERVER_ERROR);
+		}
+
 		try {
 			return $this->promptMapper->getPromptsOfUser($this->userId);
 		} catch (DBException $e) {
@@ -274,6 +278,7 @@ class GptFreePromptService {
 		$this->notificationManager->markProcessed($notification);
 
 		// Get all tasks that have this genId as identifier.
+		/** @var Task[] $tasks */
 		$tasks = $this->textProcessingManager->getUserTasksByApp($this->userId, Application::APP_ID, $genId);
 
 		// Cancel all tasks

@@ -31,14 +31,14 @@ class GptFreePromptController extends Controller {
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 *
-	 * @param string|null $prompt
+	 * @param string $prompt
 	 * @return DataResponse
 	 */
 	public function processPrompt(string $prompt, int $nResults = 1): DataResponse {
 		try {
 			$result = $this->gptFreePromptService->processPrompt($prompt, $nResults);
 		} catch (Exception $e) {
-			return new DataResponse(['error' => $e->getMessage()], $e->getCode());
+			return new DataResponse(['error' => $e->getMessage()], (int)$e->getCode());
 		}
 		
 		return new DataResponse($result);
@@ -54,7 +54,7 @@ class GptFreePromptController extends Controller {
 		try {
 			$result = $this->gptFreePromptService->getPromptHistory();
 		} catch (Exception $e) {
-			return new DataResponse(['error' => $e->getMessage()], $e->getCode());
+			return new DataResponse(['error' => $e->getMessage()], (int)$e->getCode());
 		}
 		return new DataResponse($result, Http::STATUS_OK);
 	}
@@ -71,7 +71,7 @@ class GptFreePromptController extends Controller {
 		try {
 			$result = $this->gptFreePromptService->getOutputs($genId);
 		} catch (Exception $e) {
-			$response = new DataResponse(['error' => $e->getMessage()], $e->getCode());
+			$response = new DataResponse(['error' => $e->getMessage()], (int)$e->getCode());
 			if($e->getCode() === Http::STATUS_BAD_REQUEST) {
 				// Throttle brute force attempts
 				$response->throttle(['action' => 'genId']);
@@ -94,7 +94,7 @@ class GptFreePromptController extends Controller {
 		try {
 			$this->gptFreePromptService->cancelGeneration($genId);
 		} catch (Exception $e) {
-			$response = new DataResponse(['error' => $e->getMessage()], $e->getCode());
+			$response = new DataResponse(['error' => $e->getMessage()], (int)$e->getCode());
 			return $response;
 		}
 		return new DataResponse(['status' => 'success'], Http::STATUS_OK);
@@ -114,7 +114,7 @@ class GptFreePromptController extends Controller {
 		try {
 			$this->gptFreePromptService->setNotify($genId, $notify);
 		} catch (Exception $e) {
-			$response = new DataResponse(['error' => $e->getMessage()], $e->getCode());
+			$response = new DataResponse(['error' => $e->getMessage()], (int)$e->getCode());
 			return $response;
 		}
 		return new DataResponse(['status' => 'success'], Http::STATUS_OK);

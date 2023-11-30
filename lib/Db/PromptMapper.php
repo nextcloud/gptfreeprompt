@@ -15,7 +15,9 @@ use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\Exception;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
-
+/**
+ * @implements QBMapper<Prompt>
+ */
 class PromptMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'gptfreeprompt_prompts', Prompt::class);
@@ -37,7 +39,9 @@ class PromptMapper extends QBMapper {
 				$qb->expr()->eq('id', $qb->createNamedParameter($id, IQueryBuilder::PARAM_INT))
 			);
 
-		return $this->findEntity($qb);
+		/** @var Prompt $retVal */
+		$retVal = $this->findEntity($qb);
+		return $retVal;
 	}
 
 	/**
@@ -59,8 +63,9 @@ class PromptMapper extends QBMapper {
 			->andWhere(
 				$qb->expr()->eq('user_id', $qb->createNamedParameter($userId, IQueryBuilder::PARAM_STR))
 			);
-
-		return $this->findEntity($qb);
+		/** @var Prompt $retVal */
+		$retVal = $this->findEntity($qb);
+		return $retVal;
 	}
 
 	/**
@@ -82,8 +87,9 @@ class PromptMapper extends QBMapper {
 			->andWhere(
 				$qb->expr()->eq('value', $qb->createNamedParameter($value, IQueryBuilder::PARAM_STR))
 			);
-
-		return $this->findEntity($qb);
+		/** @var Prompt $retVal */
+		$retVal = $this->findEntity($qb);
+		return $retVal;
 	}
 
 	/**
@@ -121,7 +127,9 @@ class PromptMapper extends QBMapper {
 		try {
 			$prompt = $this->getPromptOfUserByValue($userId, $value);
 			$prompt->setTimestamp($timestamp);
-			return $this->update($prompt);
+			/** @var Prompt $updatedPrompt */
+			$updatedPrompt = $this->update($prompt);
+			return $updatedPrompt;
 		} catch (DoesNotExistException | MultipleObjectsReturnedException $e) {
 		}
 
@@ -130,6 +138,7 @@ class PromptMapper extends QBMapper {
 		$prompt->setUserId($userId);
 		$prompt->setValue($value);
 		$prompt->setTimestamp($timestamp);
+		/** @var Prompt $insertedPrompt */
 		$insertedPrompt = $this->insert($prompt);
 
 		$this->cleanupUserPrompts($userId);
@@ -172,7 +181,8 @@ class PromptMapper extends QBMapper {
 		$req = $qb->executeQuery();
 
 		$lastPromptTs = [];
-		while ($row = $req->fetch()) {
+		/** @var mixed[] $row */
+		while ($row = $req->fetch()) {			
 			$lastPromptTs[] = (int)$row['timestamp'];
 		}
 		$req->closeCursor();

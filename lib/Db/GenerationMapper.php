@@ -15,7 +15,9 @@ use OCP\DB\Exception;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
 use RuntimeException;
-
+/**
+ * @implements QBMapper<Generation>
+ */
 class GenerationMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'gptfreeprompt_gens', Generation::class);
@@ -36,15 +38,16 @@ class GenerationMapper extends QBMapper {
 			->where(
 				$qb->expr()->eq('id', $qb->createNamedParameter($id, IQueryBuilder::PARAM_INT))
 			);
-
-		return $this->findEntity($qb);
+		/** @var Generation $retVal */
+		$retVal = $this->findEntity($qb);
+		return $retVal;
 	}
 
 	/**
 	 * @param string $genId
-	 * @return array
+	 * @return Generation[]
 	 * @throws DoesNotExistException
-	 * @throws \OCP\Db\Exception
+	 * @throws Exception
 	 */
 	public function getGenerationsByGenId(string $genId): array {
 		$qb = $this->db->getQueryBuilder();
@@ -55,14 +58,16 @@ class GenerationMapper extends QBMapper {
 				$qb->expr()->eq('gen_id', $qb->createNamedParameter($genId, IQueryBuilder::PARAM_STR))
 			);
 
-		return $this->findEntities($qb);
+		/** @var Generation[] $retVal */
+		$retVal = $this->findEntities($qb);
+		return $retVal;
 	}
 
 	/**
 	 * @param string $userId
 	 * @param string $genId
-	 * @return array
-	 * @throws \OCP\Db\Exception
+	 * @return Generation[]
+	 * @throws Exception
 	 * @throws DoesNotExistException
 	 */
 	public function getGenerationsByUserAndGenId(string $userId, string $genId): array {
@@ -76,15 +81,16 @@ class GenerationMapper extends QBMapper {
 			->andWhere(
 				$qb->expr()->eq('gen_id', $qb->createNamedParameter($genId, IQueryBuilder::PARAM_STR))
 			);
-
-		return $this->findEntities($qb);
+		/** @var Generation[] $retVal */
+		$retVal = $this->findEntities($qb);
+		return $retVal;
 	}
 
 	/**
 	 * Delete all generations of a user
 	 * @param string $userId
 	 * @return void
-	 * @throws \OCP\Db\Exception
+	 * @throws Exception
 	 */
 	public function deleteGenerationsByUser(string $userId): void {
 		$qb = $this->db->getQueryBuilder();
@@ -99,7 +105,7 @@ class GenerationMapper extends QBMapper {
 
 	/**
 	 * @return void
-	 * @throws \OCP\Db\Exception
+	 * @throws Exception
 	 * @throws RuntimeException
 	 */
 	public function cleanupGenerations(): void {

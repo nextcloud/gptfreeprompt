@@ -7,9 +7,7 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "psalm/phar": "^5.16",
-        "nextcloud/ocp": "dev-master"
+        "php": "^8.1"
     },
     "scripts": {
 		"lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
@@ -21,6 +19,9 @@
 	},
     "require-dev": {
         "nextcloud/coding-standard": "^1.1",
-        "phpunit/phpunit": "^9.0.0"
+        "phpunit/phpunit": "^9.0.0",
+        "nextcloud/ocp": "dev-master",
+        "symfony/console": "^6.4",
+        "psalm/phar": "^5.16"
     }
 }

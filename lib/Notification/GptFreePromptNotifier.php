@@ -49,7 +49,14 @@ class GptFreePromptNotifier implements INotifier {
 		$parameters = $notification->getMessageParameters();
 
 		$subject = $this->il10n->t('Text generation ready');
-		$message = '"' . $parameters['prompt'] . '"';
+		
+		// Mostly to make psalm happy:
+		if (isset($parameters['prompt']) && is_string($parameters['prompt'])) {
+			$message = '"' . $parameters['prompt'] . '"';
+		} else {
+			$message = '';
+		}
+		
 		$notification->setParsedSubject($subject);
 		$notification->setParsedMessage($message);
 

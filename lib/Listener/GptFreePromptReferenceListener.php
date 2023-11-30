@@ -17,7 +17,9 @@ use OCP\TextProcessing\IManager;
 use OCP\Util;
 
 use Psr\Log\LoggerInterface;
-
+/**
+ * @implements IEventListener<RenderReferenceEvent>
+ */
 class GptFreePromptReferenceListener implements IEventListener {
 	public function __construct(
 		private IConfig $config,
