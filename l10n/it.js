@@ -1,10 +1,12 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Visualizza",
     "Delete" : "Elimina",
     "Success" : "Successo",
     "Failed" : "Non riuscito",
     "Processing" : "Elaborazione",
+    "Deleted" : "Eliminato",
     "Unknown" : "Sconosciuto",
     "Reset" : "Ripristina",
     "Result" : "Risultato",

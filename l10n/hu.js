@@ -1,11 +1,13 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Megtekintés",
     "Delete" : "Törlés",
     "AI text generation" : "AI szöveggenerálás",
     "Success" : "Siker",
     "Failed" : "Sikertelen",
     "Processing" : "Feldolgozás",
+    "Deleted" : "Törölve",
     "Unknown" : "Ismeretlen",
     "Reset" : "Alaphelyzetbe állítás",
     "Text generation error" : "Szöveg generálás hiba",

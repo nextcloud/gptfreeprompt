@@ -2,6 +2,9 @@ OC.L10N.register(
     "gptfreeprompt",
     {
     "Delete" : "Kustuta",
+    "Processing" : "Töötlemine",
+    "Deleted" : "Kustutatud",
+    "Unknown" : "Teadmata",
     "Reset" : "Lähtesta",
     "Advanced options" : "Täpsemad valikud",
     "Done" : "Valmis",

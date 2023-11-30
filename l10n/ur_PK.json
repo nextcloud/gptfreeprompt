@@ -1,0 +1,6 @@
+{ "translations": {
+    "Delete" : "حذف کریں",
+    "Deleted" : "حذف شدہ ",
+    "Reset" : "ری سیٹ"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

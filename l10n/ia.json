@@ -1,5 +1,7 @@
 { "translations": {
+    "View" : "Vider",
     "Delete" : "Deler",
+    "Deleted" : "Delite",
     "Unknown" : "Incognite",
     "Reset" : "Re-fixar",
     "Advanced options" : "Optiones avantiate",

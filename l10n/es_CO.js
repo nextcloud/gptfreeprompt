@@ -1,6 +1,11 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "Delete" : "Borrar",
+    "Processing" : "Procesando",
+    "Deleted" : "Borrado",
+    "Unknown" : "Desconocido",
+    "Reset" : "Reiniciar",
     "Result" : "Resultado",
     "Advanced options" : "Opciones avanzadas",
     "Preview" : "Previsualizar"

@@ -1,0 +1,8 @@
+{ "translations": {
+    "View" : "Bekyk",
+    "Delete" : "Skrap",
+    "Deleted" : "Geskrap",
+    "Reset" : "Herstel",
+    "Advanced options" : "Gevorderde opsies"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

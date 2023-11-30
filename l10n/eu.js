@@ -1,8 +1,12 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Ikusi",
     "Delete" : "Ezabatu",
     "Success" : "Arrakasta",
+    "Failed" : "Huts egin du",
+    "Processing" : "Prozesatzen",
+    "Deleted" : "Ezabatuta",
     "Unknown" : "Ezezaguna",
     "Reset" : "Berrezarri",
     "Result" : "Emaitza",

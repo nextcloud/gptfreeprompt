@@ -1,0 +1,6 @@
+{ "translations": {
+    "Delete" : "հեռացնել",
+    "Deleted" : "Ջնջված",
+    "Unknown" : "Անհայտ"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

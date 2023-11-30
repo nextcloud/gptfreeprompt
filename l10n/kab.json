@@ -1,0 +1,7 @@
+{ "translations": {
+    "Delete" : "Kkes",
+    "Deleted" : "Yettwakkes",
+    "Unknown" : "Arussin",
+    "Done" : "Immed"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

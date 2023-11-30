@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "წაშლა",
     "Processing" : "პროცესირება",
+    "Deleted" : "გაუქმდა",
     "Unknown" : "უცნობია",
     "Reset" : "საწყის მდოგმარეობაში დაბრუნება",
     "Result" : "შედეგი",

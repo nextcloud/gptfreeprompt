@@ -1,9 +1,11 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Skoða",
     "Delete" : "Eyða",
     "Success" : "Tókst",
     "Processing" : "Í vinnslu",
+    "Deleted" : "Eytt",
     "Unknown" : "Óþekkt",
     "Reset" : "Endurstilla",
     "Result" : "Niðurstöður",

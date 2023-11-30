@@ -1,0 +1,7 @@
+{ "translations": {
+    "Delete" : "Sil",
+    "Deleted" : "Silinib",
+    "Reset" : "Sıfırla",
+    "Done" : "Edildi"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,9 +1,11 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "צפייה",
     "Delete" : "מחיקה",
     "Success" : "הצלחה",
     "Processing" : "מתבצע עיבוד",
+    "Deleted" : "נמחק",
     "Unknown" : "לא ידוע",
     "Reset" : "איפוס",
     "Result" : "תוצאה",

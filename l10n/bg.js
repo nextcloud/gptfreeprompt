@@ -1,6 +1,14 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Изглед",
+    "Delete" : "Изтриване",
+    "Success" : "Успех",
+    "Failed" : "Неуспешно",
+    "Processing" : "Обработване",
+    "Deleted" : "Изтрито",
+    "Unknown" : "Неизвестен",
+    "Reset" : "Възстановяване",
     "Prompt" : "Подкана",
     "Result" : "Резултат",
     "Result {index}" : "Резултат {index}",

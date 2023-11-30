@@ -1,5 +1,7 @@
 { "translations": {
     "Delete" : "Borrar",
+    "Processing" : "Procesando",
+    "Deleted" : "Borrado",
     "Reset" : "Restablecer",
     "Result" : "Resultado",
     "Advanced options" : "Opciones avanzadas",

@@ -1,6 +1,10 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Gwell",
+    "Delete" : "Lemel",
+    "Deleted" : "Lamet",
+    "Unknown" : "Dianv",
     "Done" : "Graet",
     "Preview" : "Ragwell"
 },

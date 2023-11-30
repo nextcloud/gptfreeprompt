@@ -1,9 +1,13 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Ver",
     "Delete" : "Eliminar",
     "AI text generation" : "IA de xeración de texto",
     "Success" : "Correcto",
+    "Failed" : "Fallou",
+    "Processing" : "Procesando",
+    "Deleted" : "Eliminada",
     "Unknown" : "Descoñecido",
     "GptFreePrompt" : "Indicador GptFree",
     "A SmartPicker for interfacing with the GPT integrations that provide free prompt cabability" : "Un Selector intelixente para interactuar coas integracións de GPT que fornezan a posibilidade de indicación de balde.",
@@ -27,6 +31,7 @@ OC.L10N.register(
     "Regenerate" : "Rexenerar",
     "Preview" : "Vista previa",
     "Notify when ready error" : "Produciuse un erro ao notificar cando está listo",
+    "Unknown notify when ready error" : "Produciuse un error descoñecido ao notificar cando está listo",
     "Text generation" : "Xeración de texto"
 },
 "nplurals=2; plural=(n != 1);");
