@@ -346,16 +346,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.38.0",
+            "version": "v3.40.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "2317318f4187904d6331e68ae730808b6c3ae98a"
+                "reference": "4c063eff281b1e3a73c33c0d5c39e8e2b766464e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/2317318f4187904d6331e68ae730808b6c3ae98a",
-                "reference": "2317318f4187904d6331e68ae730808b6c3ae98a",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/4c063eff281b1e3a73c33c0d5c39e8e2b766464e",
+                "reference": "4c063eff281b1e3a73c33c0d5c39e8e2b766464e",
                 "shasum": ""
             },
             "require": {
@@ -392,9 +392,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.38.0"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.40.0"
             },
-            "time": "2023-11-07T08:45:37+00:00"
+            "time": "2023-11-26T09:26:25+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
