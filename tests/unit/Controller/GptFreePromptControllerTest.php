@@ -4,25 +4,17 @@
 
 namespace OCA\GptFreePrompt\Tests\Controller;
 
-use Exception;
 use OCA\GptFreePrompt\Controller\GptFreePromptController;
 use OCA\GptFreePrompt\Service\GptFreePromptService;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Services\IInitialState;
 use OCP\IRequest;
-use OCP\IConfig;
-use Psr\Log\LoggerInterface;
 use OCP\App\IAppManager;
 use Test\TestCase;
-use OCP\TextProcessing\IManager;
 use OCA\GptFreePrompt\Db\PromptMapper;
 use OCA\GptFreePrompt\Db\GenerationMapper;
 use OCA\GptFreePrompt\Db\Generation;
-use OCP\IL10N;
-use OCP\Notification\IManager as INotificationManager;
-use OCP\IServerContainer;
-use OCA\GptFreePrompt\AppInfo\Application;
 
 /**
  * @group DB
@@ -43,32 +35,17 @@ class GptFreePromptControllerTest extends TestCase
 
 	public static function setUpBeforeClass(): void {
 		parent::setUpBeforeClass();
-		$backend = new \Test\Util\User\Dummy();
-		$backend->createUser(self::TEST_USER1, self::TEST_USER1);
-		\OC::$server->get(\OCP\IUserManager::class)->registerBackend($backend);
 	}
 
 	protected function setUp(): void
-	{
+	{	
 		parent::setUp();
 
-		$this->app = new Application();
-		$this->container = $this->app->getContainer();
-		$c = $this->container;
-		$sc = $c->get(IServerContainer::class);
+		$this->loginAsUser(self::TEST_USER1);
 
 		$this->generationMapper = \OC::$server->get(GenerationMapper::class);
 
-		$this->gptFreePromptService = new GptFreePromptService(
-			\OC::$server->get(IConfig::class),
-			\OC::$server->get(LoggerInterface::class),
-			\OC::$server->get(IManager::class),
-			self::TEST_USER1,
-			\OC::$server->get(PromptMapper::class),
-			$this->generationMapper,
-			$sc->getL10N($c->get('AppName')),
-			\OC::$server->get(INotificationManager::class)
-		);
+		$this->gptFreePromptService = \OC::$server->get(GptFreePromptService::class);
 		$this->appManager = \OC::$server->get(IAppManager::class);
 
 		$this->appManager->enableApp('testing');
