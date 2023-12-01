@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.0.2 – 2023-12-01
 ### Fixed
 * Added missing licensing
 * Implemented cs:fix
+* Implemented missing php-unit tests
+* Implemented missing psalm config
+* Fixed processing of long generations with runOrSchedule()
 
 ## 1.0.1 – 2023-10-04
 ### Fixed
