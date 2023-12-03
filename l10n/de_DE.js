@@ -54,7 +54,7 @@ OC.L10N.register(
     "Regenerate" : "Neu erstellen",
     "Preview" : "Vorschau",
     "You will be notified when the text generation is ready." : "Sie werden benachrichtigt, wenn die Texterstellung abgeschlossen ist.",
-    "Notify when ready error" : "Bei Bereitschaftsfehler benachrichtigen",
+    "Notify when ready error" : "Fehler bei der Fertigstellungsbenachrichtigung",
     "Unknown notify when ready error" : "Unbekannter Fehler für \"Benachrichtigung bei Bereitschaft\"",
     "Text generation" : "Textgenerierung"
 },
