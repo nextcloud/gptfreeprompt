@@ -9,9 +9,12 @@ OC.L10N.register(
     "Deleted" : "削除済み",
     "Unknown" : "不明",
     "Reset" : "リセット",
+    "Prompt" : "プロンプト",
     "Result" : "結果",
     "Advanced options" : "詳細オプション",
     "Done" : "完了",
-    "Preview" : "プレビュー"
+    "Regenerate" : "再生成する",
+    "Preview" : "プレビュー",
+    "Text generation" : "テキスト生成"
 },
 "nplurals=1; plural=0;");
