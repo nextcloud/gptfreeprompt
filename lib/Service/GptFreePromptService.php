@@ -336,7 +336,7 @@ class GptFreePromptService {
 				$this->generationMapper->update($gen);
 			} catch (DBException | \InvalidArgumentException $e) {
 				$this->logger->warning('Failed to update generation with new notification status', ['exception' => $e]);
-				throw new Exception($this->l10n->t('Failed to set notification: unknown error'), Http::STATUS_INTERNAL_SERVER_ERROR);
+				throw new Exception($this->l10n->t('Failed to set notification: Unknown error'), Http::STATUS_INTERNAL_SERVER_ERROR);
 			}
 			
 		}
