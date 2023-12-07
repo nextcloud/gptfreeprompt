@@ -313,7 +313,7 @@ class GptFreePromptService {
 	public function setNotify(string $genId, bool $notify): void {
 		if ($this->userId === null) {
 			$this->logger->warning('User id is null when trying to set notify');
-			throw new Exception($this->l10n->t('Failed set a notification: Uknown user'), Http::STATUS_INTERNAL_SERVER_ERROR);
+			throw new Exception($this->l10n->t('Failed to set notification: Unknown user'), Http::STATUS_INTERNAL_SERVER_ERROR);
 		}
 		
 		try {
@@ -336,7 +336,7 @@ class GptFreePromptService {
 				$this->generationMapper->update($gen);
 			} catch (DBException | \InvalidArgumentException $e) {
 				$this->logger->warning('Failed to update generation with new notification status', ['exception' => $e]);
-				throw new Exception($this->l10n->t('Failed to set notification: unknown error'), Http::STATUS_INTERNAL_SERVER_ERROR);
+				throw new Exception($this->l10n->t('Failed to set notification: Unknown error'), Http::STATUS_INTERNAL_SERVER_ERROR);
 			}
 			
 		}

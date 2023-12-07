@@ -7,8 +7,8 @@
     -->
     <id>gptfreeprompt</id>
     <name>GptFreePrompt</name>
-    <summary>A SmartPicker for interfacing with the GPT integrations that provide free prompt cabability</summary>
-    <description><![CDATA[A unified SmartPicker for Nextcloud large language model integrations that provide free prompting cabability.]]></description>
+    <summary>A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability</summary>
+    <description><![CDATA[A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability.]]></description>
     <version>1.0.2</version>
     <licence>agpl</licence>
     <author mail="sami.finnila@nextcloud.com" >Sami Finnilä</author>
