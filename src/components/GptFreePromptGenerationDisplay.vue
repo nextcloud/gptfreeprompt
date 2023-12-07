@@ -22,7 +22,7 @@
 						{{ t('gptfreeprompt', 'Estimated completion time: ') + timeUntilCompletion }}
 					</div>
 					<div v-else>
-						{{ t('gptfreeprompt', 'This can take a while...') }}
+						{{ t('gptfreeprompt', 'This can take a while…') }}
 					</div>
 				</div>
 				<div v-else>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 			<div v-else>
-				{{ t('gptfreeprompt', 'Loading generations...') }}
+				{{ t('gptfreeprompt', 'Loading generations…') }}
 			</div>
 		</div>
 		<div v-if="!loading" class="button-wrapper">
