@@ -11,7 +11,7 @@ OC.L10N.register(
     "Failed to create a generation" : "Produciuse un fallo ao crear unha xeración",
     "Failed to get prompt history" : "Produciuse un fallo ao obter o historial de indicacións",
     "Success" : "Correcto",
-    "Failed" : "Fallou",
+    "Failed" : "Fallado",
     "Processing" : "Procesando",
     "Deleted" : "Eliminada",
     "Unknown" : "Descoñecido",
