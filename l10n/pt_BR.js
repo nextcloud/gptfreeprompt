@@ -10,8 +10,6 @@ OC.L10N.register(
     "Deleted" : "Excluído",
     "Unknown" : "Desconhecido",
     "GptFreePrompt" : "GptFreePrompt",
-    "A SmartPicker for interfacing with the GPT integrations that provide free prompt cabability" : "Um selecionador inteligente para interagir com integrações GPT que providenciam capabilidade de prompts gratuitos",
-    "A unified SmartPicker for Nextcloud large language model integrations that provide free prompting cabability." : "Um selecionador unificado para integrações do Nextcloud com modelos grandes de linguagem [large language model] que providencia prompts gratuitos",
     "Reset" : "Redefinir",
     "Unexpected server response" : "Resposta inesperada do servidor",
     "Text generation error" : "Erro na geração de texto",
