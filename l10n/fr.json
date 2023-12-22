@@ -17,6 +17,7 @@
     "How many results to generate" : "Nombre de résultats à générer",
     "What is the matter with putting pineapple on pizza?" : "Qu'y a-t-il de mal à mettre de l'ananas sur une pizza ?",
     "Regenerate" : "Régénérer",
-    "Preview" : "Prévisualiser"
+    "Preview" : "Prévisualiser",
+    "Text generation" : "Génération de texte"
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }
