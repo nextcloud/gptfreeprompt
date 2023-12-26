@@ -2,36 +2,36 @@
 #
 # https://github.com/nextcloud/.github
 # https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization
-# SPDX-FileCopyrightText: Nextcloud contributors
-# SPDX-License-Identifier: AGPL-3.0-or-later
 
-name: Lint
+name: Lint php-cs
 
-on:
-  pull_request:
-  push:
-    branches:
-      - main
-      - stable*
+on: pull_request
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lint-php-cs-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
-  php-lint:
+  lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php-versions: ["8.0", "8.1", "8.2"]
 
     name: php-cs
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
-      - name: Set up php ${{ matrix.php-versions }}
-        uses: shivammathur/setup-php@v2
+      - name: Set up php8.2
+        uses: shivammathur/setup-php@e6f75134d35752277f093989e72e140eaa222f35 # v2
         with:
-          php-version: ${{ matrix.php-versions }}
+          php-version: 8.2
           coverage: none
+          ini-file: development
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
         run: composer i
