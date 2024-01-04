@@ -1,0 +1,14 @@
+{ "translations": {
+    "View" : "View",
+    "Delete" : "Delete",
+    "Failed" : "Failed",
+    "Processing" : "Processing",
+    "Deleted" : "Deleted",
+    "Unknown" : "Unknown",
+    "Reset" : "Reset",
+    "Result" : "Result",
+    "Advanced options" : "Advanced options",
+    "Done" : "Done",
+    "Preview" : "Preview"
+},"pluralForm" :"nplurals=2; plural=(n!=1);"
+}
