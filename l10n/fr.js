@@ -9,6 +9,7 @@ OC.L10N.register(
     "Deleted" : "Effacé",
     "Unknown" : "Inconnu",
     "Reset" : "Réinitialiser",
+    "Unexpected server response" : "Réponse du serveur inattendue",
     "Prompt" : "Invite de commande",
     "Result" : "Résultat",
     "Result {index}" : "Résultat {index}",
