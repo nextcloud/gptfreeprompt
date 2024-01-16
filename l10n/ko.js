@@ -11,6 +11,7 @@ OC.L10N.register(
     "Reset" : "초기화",
     "Result" : "결과",
     "Advanced options" : "고급 설정",
-    "Done" : "완료"
+    "Done" : "완료",
+    "Preview" : "미리 보기"
 },
 "nplurals=1; plural=0;");
