@@ -1,17 +1,23 @@
 { "translations": {
     "View" : "Ansehen",
     "Delete" : "Löschen",
+    "AI text generation" : "KI-Texterstellung",
+    "FreePromptTaskType not available" : "FreePromptTaskType nicht verfügbar",
+    "Failed to run or schedule a task" : "Fehler bei der Ausführung oder Planung einer Aufgabe",
+    "Failed to get prompt history" : "Eingabeverlauf konnte nicht abgerufen werden",
     "Success" : "Erfolgreich",
     "Failed" : "Fehlgeschlagen",
     "Processing" : "Verarbeiten",
     "Deleted" : "Gelöscht",
     "Unknown" : "Unbekannt",
+    "Generation not found" : "Erstellung nicht gefunden",
     "Reset" : "Zurücksetzen",
     "Result" : "Ergebnis",
     "Show/hide advanced options" : "Erweiterte Optionen anzeigen/ausblenden",
     "Advanced options" : "Erweiterte Optionen",
     "Done" : "Erledigt",
     "Regenerate" : "Neu erstellen",
-    "Preview" : "Vorschau"
+    "Preview" : "Vorschau",
+    "You will be notified when the text generation is ready." : "Du wirst benachrichtigt, wenn die Texterstellung abgeschlossen ist."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
