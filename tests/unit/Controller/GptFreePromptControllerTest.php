@@ -1,28 +1,28 @@
 <?php
+
 // SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 namespace OCA\GptFreePrompt\Tests\Controller;
 
 use OCA\GptFreePrompt\Controller\GptFreePromptController;
+use OCA\GptFreePrompt\Db\Generation;
+use OCA\GptFreePrompt\Db\GenerationMapper;
+use OCA\GptFreePrompt\Db\PromptMapper;
 use OCA\GptFreePrompt\Service\GptFreePromptService;
-use OCP\AppFramework\Http\DataResponse;
+use OCP\App\IAppManager;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Services\IInitialState;
 use OCP\IRequest;
-use OCP\App\IAppManager;
 use Test\TestCase;
-use OCA\GptFreePrompt\Db\PromptMapper;
-use OCA\GptFreePrompt\Db\GenerationMapper;
-use OCA\GptFreePrompt\Db\Generation;
 
 /**
  * @group DB
  */
-class GptFreePromptControllerTest extends TestCase
-{
-	const APP_NAME = 'gptfreeprompt';
-	const TEST_USER1 = 'testuser';
+class GptFreePromptControllerTest extends TestCase {
+	public const APP_NAME = 'gptfreeprompt';
+	public const TEST_USER1 = 'testuser';
 	private $controller;
 	private $request;
 	private $gptFreePromptService;
@@ -37,8 +37,7 @@ class GptFreePromptControllerTest extends TestCase
 		parent::setUpBeforeClass();
 	}
 
-	protected function setUp(): void
-	{	
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->loginAsUser(self::TEST_USER1);
@@ -96,13 +95,11 @@ class GptFreePromptControllerTest extends TestCase
 	
 	}
 
-	public function testPromptProcessing(): void
-	{
+	public function testPromptProcessing(): void {
 		$this->processDummyPrompt();
 	}
 
-	public function testGetOuputs(): void
-	{
+	public function testGetOuputs(): void {
 		$this->processDummyPrompt();
 
 		$response = $this->controller->getOutputs($this->genId);
@@ -117,8 +114,7 @@ class GptFreePromptControllerTest extends TestCase
 		// TODO: Trigger the cron job to run and check the result
 	}
 
-	public function testGetOutputsWithException(): void
-	{
+	public function testGetOutputsWithException(): void {
 		$this->processDummyPrompt();
 		$genId = ((string) bin2hex(random_bytes(32)));
 		$errorMessage = 'Generation not found';
@@ -131,8 +127,7 @@ class GptFreePromptControllerTest extends TestCase
 		$this->assertEquals($errorCode, $response->getStatus());
 	}
 
-	public function testGetPromptHistory(): void
-	{
+	public function testGetPromptHistory(): void {
 		$this->processDummyPrompt();
 
 		$expectedResult = 'Test prompt';
@@ -146,8 +141,7 @@ class GptFreePromptControllerTest extends TestCase
 		$this->assertEquals($expectedResult, array_pop($result_array)->getValue());
 	}
 
-	public function testSetNotify(): void
-	{
+	public function testSetNotify(): void {
 		$this->processDummyPrompt();
 
 		$response = $this->controller->setNotify($this->genId, true);

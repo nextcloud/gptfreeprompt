@@ -193,13 +193,14 @@ export default {
 			// from the end of the text does not trigger an update.
 
 			// Delete any trailing newlines
-			this.result = this.result.replace(/\n+$/, '')
+			/* this.result = this.result.replace(/\n+$/, '')
 			this.result += '.'
 
 			// Let the ui refresh before resetting the text
 			setTimeout(() => {
 				this.onReset()
-			}, 0)
+			}, 0) */
+			this.onReset()
 		},
 
 		copyToClipboard() {
