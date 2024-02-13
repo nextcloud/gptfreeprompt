@@ -23,7 +23,7 @@ on:
       - tests/**
 
 env:
-  APP_NAME: integration_openai
+  APP_NAME: gptfreeprompt
 
 jobs:
   php:
@@ -34,7 +34,7 @@ jobs:
       fail-fast: false
       matrix:
         php-versions: ['8.1','8.2','8.3']
-        databases: ['sqlite', 'mysql']
+        databases: ['sqlite']
         server-versions: ['master', 'stable28']
 
     name: php${{ matrix.php-versions }}-${{ matrix.databases }}-${{ matrix.server-versions }}
