@@ -14,7 +14,7 @@
 		"lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
 		"cs:check": "php-cs-fixer fix --dry-run --diff",
 		"cs:fix": "php-cs-fixer fix",
-        "test:unit": "phpunit --config tests/phpunit.xml",
+        "test:unit": "phpunit --config tests/phpunit.xml --no-coverage",
         "psalm": "psalm.phar --no-cache",
         "psalm:clear": "psalm.phar --clear-cache && psalm.phar --clear-global-cache",
         "post-install-cmd": [
