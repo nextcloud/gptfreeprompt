@@ -15,8 +15,9 @@ use OCP\AppFramework\Db\QBMapper;
 use OCP\DB\Exception;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
+
 /**
- * @implements QBMapper<Prompt>
+ * @extends QBMapper<Prompt>
  */
 class PromptMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {
@@ -182,7 +183,7 @@ class PromptMapper extends QBMapper {
 
 		$lastPromptTs = [];
 		/** @var mixed[] $row */
-		while ($row = $req->fetch()) {			
+		while ($row = $req->fetch()) {
 			$lastPromptTs[] = (int)$row['timestamp'];
 		}
 		$req->closeCursor();

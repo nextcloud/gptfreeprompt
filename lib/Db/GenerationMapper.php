@@ -15,8 +15,9 @@ use OCP\DB\Exception;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
 use RuntimeException;
+
 /**
- * @implements QBMapper<Generation>
+ * @extends QBMapper<Generation>
  */
 class GenerationMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {

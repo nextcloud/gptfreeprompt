@@ -17,6 +17,7 @@ use OCP\TextProcessing\IManager;
 use OCP\Util;
 
 use Psr\Log\LoggerInterface;
+
 /**
  * @implements IEventListener<RenderReferenceEvent>
  */
