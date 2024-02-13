@@ -39,6 +39,7 @@ OC.L10N.register(
     "Preview" : "Forhåndsvis",
     "You will be notified when the text generation is ready." : "Du vil bli varslet når tekstgenereringen er klar.",
     "Notify when ready error" : "Varsle når klar feil",
-    "Unknown notify when ready error" : "Ukjent varsle når klar feil"
+    "Unknown notify when ready error" : "Ukjent varsle når klar feil",
+    "Text generation" : "Tekstgenerering"
 },
 "nplurals=2; plural=(n != 1);");
