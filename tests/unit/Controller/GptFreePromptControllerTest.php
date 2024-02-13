@@ -13,16 +13,15 @@ use OCA\GptFreePrompt\Service\GptFreePromptService;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Services\IInitialState;
+use OCP\IRequest;
 use OCP\TextProcessing\IManager as TextProcessingManager;
 use OCP\TextProcessing\Task;
-use OCP\IRequest;
 use Test\TestCase;
 
 /**
  * @group DB
  */
-class GptFreePromptControllerTest extends TestCase
-{
+class GptFreePromptControllerTest extends TestCase {
 	public const APP_NAME = 'gptfreeprompt';
 	public const TEST_USER1 = 'testuser';
 	private $controller;
@@ -34,13 +33,11 @@ class GptFreePromptControllerTest extends TestCase
 	private $generationMapper;
 	private $l10n;
 
-	public static function setUpBeforeClass(): void
-	{
+	public static function setUpBeforeClass(): void {
 		parent::setUpBeforeClass();
 	}
 
-	protected function setUp(): void
-	{
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->loginAsUser(self::TEST_USER1);
@@ -73,8 +70,7 @@ class GptFreePromptControllerTest extends TestCase
 		);
 	}
 
-	public static function tearDownAfterClass(): void
-	{
+	public static function tearDownAfterClass(): void {
 		parent::tearDownAfterClass();
 
 		$promptMapper = \OC::$server->get(PromptMapper::class);
@@ -83,8 +79,7 @@ class GptFreePromptControllerTest extends TestCase
 		$generationMapper->deleteGenerationsByUser(self::TEST_USER1);
 	}
 
-	protected function tearDown(): void
-	{
+	protected function tearDown(): void {
 		parent::tearDown();
 
 		$promptMapper = \OC::$server->get(PromptMapper::class);
@@ -94,8 +89,7 @@ class GptFreePromptControllerTest extends TestCase
 
 	}
 
-	private function processDummyPrompt(): void
-	{
+	private function processDummyPrompt(): void {
 		$prompt = 'Test prompt';
 		$nResults = 1;
 		$expectedResultLength = 64; // 32 bytes as ascii hex string
@@ -121,13 +115,11 @@ class GptFreePromptControllerTest extends TestCase
 
 	}
 
-	public function testPromptProcessing(): void
-	{
+	public function testPromptProcessing(): void {
 		$this->processDummyPrompt();
 	}
 
-	public function testGetOuputs(): void
-	{
+	public function testGetOuputs(): void {
 		$this->processDummyPrompt();
 		$response = $this->controller->getOutputs($this->genId);
 		$this->assertInstanceOf(DataResponse::class, $response);
@@ -135,12 +127,11 @@ class GptFreePromptControllerTest extends TestCase
 		$this->assertArrayHasKey(0, $response->getData());
 		$this->assertArrayHasKey('text', $response->getData()[0]);
 		$this->assertArrayHasKey('status', $response->getData()[0]);
-		$this->assertEquals('This is a test output.', $response->getData()[0]['text']); 
+		$this->assertEquals('This is a test output.', $response->getData()[0]['text']);
 		$this->assertEquals(1, $response->getData()[0]['status']);
 	}
 
-	public function testGetOutputsWithException(): void
-	{
+	public function testGetOutputsWithException(): void {
 		$this->processDummyPrompt();
 		$genId = ((string) bin2hex(random_bytes(32)));
 		$errorMessage = 'Generation not found';
@@ -158,8 +149,7 @@ class GptFreePromptControllerTest extends TestCase
 		$this->assertEquals($errorCode, $response->getStatus());
 	}
 
-	public function testGetPromptHistory(): void
-	{
+	public function testGetPromptHistory(): void {
 		$this->processDummyPrompt();
 
 		$expectedResult = 'Test prompt';
@@ -173,8 +163,7 @@ class GptFreePromptControllerTest extends TestCase
 		$this->assertEquals($expectedResult, array_pop($result_array)->getValue());
 	}
 
-	public function testSetNotify(): void
-	{
+	public function testSetNotify(): void {
 		$this->processDummyPrompt();
 
 		$response = $this->controller->setNotify($this->genId, true);
@@ -187,8 +176,7 @@ class GptFreePromptControllerTest extends TestCase
 		$this->assertEquals(true, $notify);
 	}
 
-	public function testCancelGeneration()
-	{
+	public function testCancelGeneration() {
 		$this->processDummyPrompt();
 
 		$response = $this->controller->cancelGeneration($this->genId);
