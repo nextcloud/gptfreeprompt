@@ -4,6 +4,7 @@ OC.L10N.register(
     "View" : "Ver",
     "Delete" : "Desaniciar",
     "Processing" : "Procesando",
+    "Deleted" : "Desanicióse",
     "Unknown" : "Desconocí­u",
     "Reset" : "Reafitar"
 },
