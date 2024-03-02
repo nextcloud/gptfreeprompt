@@ -6,6 +6,7 @@ OC.L10N.register(
     "Processing" : "Procesando",
     "Deleted" : "Desanicióse",
     "Unknown" : "Desconocí­u",
-    "Reset" : "Reafitar"
+    "Reset" : "Reafitar",
+    "Done" : "Fecho"
 },
 "nplurals=2; plural=(n != 1);");
