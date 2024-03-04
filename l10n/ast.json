@@ -1,10 +1,23 @@
 { "translations": {
     "View" : "Ver",
     "Delete" : "Desaniciar",
+    "AI text generation" : "Xeneración de testos per IA",
+    "FreePromptTaskType not available" : "FreePromptTaskType nun ta disponible",
     "Processing" : "Procesando",
     "Deleted" : "Desanicióse",
     "Unknown" : "Desconocí­u",
+    "Generation not found" : "Nun s'atopó la xeneración",
+    "This can take a while…" : "Esta aición pue tardar un poco…",
+    "Loading generations…" : "Cargando les xeneraciones…",
     "Reset" : "Reafitar",
-    "Done" : "Fecho"
+    "Unexpected server response" : "Recibióse una rempuesta inesperada del sirvidor",
+    "The processing of generations failed." : "El procesamientu de les xeneraciones falló.",
+    "The processing of some generations failed." : "El procesamientu de dalgunes xeneraciones falló.",
+    "Result" : "Resultáu",
+    "Show/hide advanced options" : "Amosar/anubrir les opciones avanzaes",
+    "Advanced options" : "Opciones avanzaes",
+    "Done" : "Fecho",
+    "Regenerate" : "Rexenerar",
+    "Preview" : "Previsualizar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
