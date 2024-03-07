@@ -5,6 +5,7 @@ OC.L10N.register(
     "Delete" : "Desaniciar",
     "AI text generation" : "Xeneración de testos per IA",
     "FreePromptTaskType not available" : "FreePromptTaskType nun ta disponible",
+    "Failed to run or schedule a task" : "Nun se pue executar o programa una xera",
     "Processing" : "Procesando",
     "Deleted" : "Desanicióse",
     "Unknown" : "Desconocí­u",
