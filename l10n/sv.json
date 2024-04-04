@@ -1,6 +1,7 @@
 { "translations": {
     "View" : "Visa",
     "Delete" : "Radera",
+    "Failed" : "Misslyckades",
     "Processing" : "Bearbetar",
     "Deleted" : "Borttagen",
     "Unknown" : "Okänd",

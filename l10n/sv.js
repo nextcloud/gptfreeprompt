@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Visa",
     "Delete" : "Radera",
+    "Failed" : "Misslyckades",
     "Processing" : "Bearbetar",
     "Deleted" : "Borttagen",
     "Unknown" : "Okänd",
