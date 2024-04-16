@@ -6,6 +6,7 @@
     "Processing" : "En cours d'exécution",
     "Deleted" : "Effacé",
     "Unknown" : "Inconnu",
+    "GptFreePrompt" : "GptFreePrompt",
     "Estimated completion time: " : "Délai d'exécution estimé :",
     "This can take a while…" : "Cela peut prendre un certain temps…",
     "Loading generations…" : "Chargement des générations…",
