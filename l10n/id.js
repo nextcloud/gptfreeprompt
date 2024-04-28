@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Tampilan",
     "Delete" : "Hapus",
+    "Failed" : "Gagal",
     "Deleted" : "Dihapus",
     "Unknown" : "Tidak diketahui",
     "Reset" : "Setel ulang",

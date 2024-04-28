@@ -4,6 +4,7 @@ OC.L10N.register(
     "View" : "表示",
     "Delete" : "削除",
     "AI text generation" : "AIテキスト生成",
+    "Failed to run or schedule a task" : "タスクの実行またはスケジュールに失敗しました",
     "Success" : "完了",
     "Failed" : "失敗",
     "Processing" : "処理中",
