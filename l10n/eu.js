@@ -4,6 +4,7 @@ OC.L10N.register(
     "View" : "Ikusi",
     "Delete" : "Ezabatu",
     "AI text generation" : "IA testu sorpena",
+    "FreePromptTaskType not available" : "FreePromptTaskType ez dago eskuragarri",
     "Failed to run or schedule a task" : "Ezin izan da zeregina exekutatu edo programatu",
     "Failed to get prompt history" : "Ezin izan da bidalketen historia jaso",
     "Success" : "Arrakasta",
