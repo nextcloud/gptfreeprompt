@@ -1,6 +1,7 @@
 { "translations": {
     "View" : "Vizualizare",
     "Delete" : "Șterge",
+    "Failed" : "Eșuat",
     "Deleted" : "Șters",
     "Unknown" : "Necunoscut",
     "Reset" : "Resetare",

@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Vizualizare",
     "Delete" : "Șterge",
+    "Failed" : "Eșuat",
     "Deleted" : "Șters",
     "Unknown" : "Necunoscut",
     "Reset" : "Resetare",
