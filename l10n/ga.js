@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Scrios",
     "Success" : "Rath",
+    "Reset" : "Athshocraigh",
     "Advanced options" : "Ardroghanna",
     "Done" : "Déanta"
 },
