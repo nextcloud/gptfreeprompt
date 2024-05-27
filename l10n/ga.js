@@ -1,6 +1,7 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Amharc",
     "Delete" : "Scrios",
     "Success" : "Rath",
     "Reset" : "Athshocraigh",
