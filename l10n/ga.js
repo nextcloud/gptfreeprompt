@@ -4,6 +4,8 @@ OC.L10N.register(
     "View" : "Amharc",
     "Delete" : "Scrios",
     "Success" : "Rath",
+    "Failed" : "Theip",
+    "Unknown" : "Anaithnid",
     "Reset" : "Athshocraigh",
     "Advanced options" : "Ardroghanna",
     "Done" : "Déanta"
