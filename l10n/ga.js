@@ -5,6 +5,7 @@ OC.L10N.register(
     "Delete" : "Scrios",
     "Success" : "Rath",
     "Failed" : "Theip",
+    "Deleted" : "Scriosta",
     "Unknown" : "Anaithnid",
     "Reset" : "Athshocraigh",
     "Advanced options" : "Ardroghanna",
