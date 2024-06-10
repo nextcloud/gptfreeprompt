@@ -8,6 +8,7 @@ OC.L10N.register(
     "Deleted" : "Scriosta",
     "Unknown" : "Anaithnid",
     "Reset" : "Athshocraigh",
+    "Prompt" : "Leid",
     "Advanced options" : "Ardroghanna",
     "Done" : "Déanta",
     "Preview" : "Réamhamharc"
