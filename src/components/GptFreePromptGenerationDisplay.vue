@@ -37,7 +37,7 @@
 			<NcButton :disabled="result === null || loading" type="primary" @click="copyToClipboard">
 				{{ t('gptfreeprompt', 'Copy text to clipboard') }}
 			</NcButton>
-			<NcButton :disabled="result === originalResult || loading" type="primary" @click="delayedReset">
+			<NcButton :disabled="result === originalResult || loading" type="primary" @click="onReset">
 				{{ t('gptfreeprompt', 'Reset') }}
 			</NcButton>
 			<NcCheckboxRadioSwitch
@@ -57,8 +57,13 @@ import NcRichContenteditable from '@nextcloud/vue/dist/Components/NcRichContente
 import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
-import { showError } from '@nextcloud/dialogs'
+import { showError, showSuccess } from '@nextcloud/dialogs'
 import humanizeDuration from 'humanize-duration'
+
+import VueClipboard from 'vue-clipboard2'
+import Vue from 'vue'
+
+Vue.use(VueClipboard)
 
 export default {
 	name: 'GptFreePromptGenerationDisplay',
@@ -187,23 +192,14 @@ export default {
 			this.result = this.originalResult
 		},
 
-		delayedReset() {
-			// This is a hack to sure the text box is updated
-			// when we reset the text since removing newlines or spaces
-			// from the end of the text does not trigger an update.
-
-			// Delete any trailing newlines
-			this.result = this.result.replace(/\n+$/, '')
-			this.result += '.'
-
-			// Let the ui refresh before resetting the text
-			setTimeout(() => {
-				this.onReset()
-			}, 0)
-		},
-
-		copyToClipboard() {
-			navigator.clipboard.writeText(this.result)
+		async copyToClipboard() {
+			try {
+				await this.$copyText(this.result)
+				showSuccess(t('gptfreeprompt', 'Text copied to clipboard'))
+			} catch (error) {
+				console.error(error)
+				showError(t('gptfreeprompt', 'Failed to copy the text to clipboard'))
+			}
 		},
 
 		processCompletion(response) {
