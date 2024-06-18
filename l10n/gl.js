@@ -42,7 +42,7 @@ OC.L10N.register(
     "Prompt" : "Indicación",
     "Result" : "Resultado",
     "Result {index}" : "Resultado {index}",
-    "ERROR: No free prompt provider available" : "ERRO: non hai ningún fornecedor de indicacións libres dispoñíbel",
+    "ERROR: No free prompt provider available" : "ERRO: non hai ningún provedor de indicacións libres dispoñíbel",
     "Show/hide advanced options" : "Amosar/agochar as opcións avanzadas",
     "Advanced options" : "Opcións avanzadas",
     "Preview text generation by AI" : "Vista previa da xeración de texto por IA",
