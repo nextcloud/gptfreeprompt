@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Skats",
     "Delete" : "Dzēst",
+    "Failed" : "Neizdevās",
     "Deleted" : "Dzēstie",
     "Unknown" : "Nezināms",
     "Reset" : "Atiestatīt",
