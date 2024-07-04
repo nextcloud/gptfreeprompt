@@ -8,6 +8,7 @@ OC.L10N.register(
     "Deleted" : "Eliminado",
     "Unknown" : "Desconocido",
     "Reset" : "Reiniciar",
+    "Prompt" : "Prompt",
     "Result" : "Resultado",
     "Advanced options" : "Opciones avanzadas",
     "Done" : "Terminado",
