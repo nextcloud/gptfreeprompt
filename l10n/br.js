@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Gwell",
     "Delete" : "Lemel",
+    "Failed" : "C'hwitet",
     "Deleted" : "Lamet",
     "Unknown" : "Dianv",
     "Done" : "Graet",
