@@ -14,6 +14,7 @@ OC.L10N.register(
     "Unknown" : "Unbekannt",
     "Generation not found" : "Erstellung nicht gefunden",
     "Reset" : "Zurücksetzen",
+    "Prompt" : "Prompt",
     "Result" : "Ergebnis",
     "Show/hide advanced options" : "Erweiterte Optionen anzeigen/ausblenden",
     "Advanced options" : "Erweiterte Optionen",
