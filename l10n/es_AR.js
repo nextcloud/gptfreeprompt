@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Ver",
     "Delete" : "Eliminar",
+    "Failed" : "Error",
     "Processing" : "Procesando",
     "Deleted" : "Eliminado",
     "Unknown" : "Desconocido",

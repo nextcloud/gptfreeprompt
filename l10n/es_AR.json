@@ -1,6 +1,7 @@
 { "translations": {
     "View" : "Ver",
     "Delete" : "Eliminar",
+    "Failed" : "Error",
     "Processing" : "Procesando",
     "Deleted" : "Eliminado",
     "Unknown" : "Desconocido",

@@ -13,6 +13,7 @@ OC.L10N.register(
     "Deleted" : "已删除",
     "Unknown" : "未知",
     "Generation not found" : "生成结果未找到",
+    "The text generation task was scheduled to run in the background." : "文本生成任务已排期在后台运行",
     "Reset" : "重置",
     "Prompt" : "提示",
     "Result" : "结果",
