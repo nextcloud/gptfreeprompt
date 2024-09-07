@@ -26,7 +26,7 @@ OC.L10N.register(
     "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability." : "Un selector intelixente unificado para integracións de grandes modelos de linguaxe de Nextcloud que fornezan a posibilidade de indicación libre.",
     "Text generation content" : "Contido da xeración de texto",
     "The text generation task was scheduled to run in the background." : "A tarefa de xeración de texto foi programada para executarse en segundo plano.",
-    "Estimated completion time: " : "Tempo restante estimado de finalización:",
+    "Estimated completion time: " : "Tempo estimado de conclusión:",
     "This can take a while…" : "Isto pode levar un tempo…",
     "Some generations are still being processed in the background! Showing finished generations." : "Algunhas xeracións aínda están a seren procesadas en segundo plano! Amosando as xeracións rematadas.",
     "Loading generations…" : "Cargando xeracións…",

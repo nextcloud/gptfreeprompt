@@ -18,7 +18,7 @@ OC.L10N.register(
     "The processing of generations failed." : "El procesamientu de les xeneraciones falló.",
     "The processing of some generations failed." : "El procesamientu de dalgunes xeneraciones falló.",
     "Result" : "Resultáu",
-    "Show/hide advanced options" : "Amosar/anubrir les opciones avanzaes",
+    "Show/hide advanced options" : "Amosar/esconder les opciones avanzaes",
     "Advanced options" : "Opciones avanzaes",
     "Done" : "Fecho",
     "Regenerate" : "Rexenerar",
