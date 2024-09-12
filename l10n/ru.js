@@ -9,6 +9,7 @@ OC.L10N.register(
     "Deleted" : "Удалено",
     "Unknown" : "Неизвестно",
     "Reset" : "Сброс",
+    "Unexpected server response" : "Неожиданный ответ сервера",
     "Result" : "Результат",
     "Show/hide advanced options" : "Показать/скрыть дополнительные настройки",
     "Advanced options" : "Дополнительные параметры",
