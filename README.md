@@ -1,9 +1,11 @@
 <!--
-SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
-SPDX-License-Identifier: CC0-1.0
+  - SPDX-FileCopyrightText: Sami Finnilä <sami.finnila@nextcloud.com>
+  - SPDX-License-Identifier: CC0-1.0
 -->
 
 # Gpt Free Prompt
+
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/gptfreeprompt)](https://api.reuse.software/info/github.com/nextcloud/gptfreeprompt)
 
 A Nextcloud Smart Picker integration that exposes free prompt text generation abilities of latest GPT integrations to the user. By providing a free form prompt, the user can leverage the power of AI for text generation.
 
