@@ -7,7 +7,7 @@ OC.L10N.register(
     "Processing" : "Elaborende",
     "Deleted" : "Cantzelladu",
     "Unknown" : "Disconnotu",
-    "Reset" : "Torra a impostare",
+    "Reset" : "Riprìstinu",
     "Result" : "Resurtadu",
     "Advanced options" : "Sèberos avantzados"
 },
