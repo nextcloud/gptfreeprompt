@@ -8,6 +8,8 @@ OC.L10N.register(
     "Processing" : "Обрабатывется",
     "Deleted" : "Удалено",
     "Unknown" : "Неизвестно",
+    "A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability" : "Умный селектор для взаимодействия с интеграциями GPT, которые предоставляют возможность бесплатных подсказок",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability." : "Унифицированный интеллектуальный выбор для интеграции большой языковой модели Nextcloud, обеспечивающий возможность свободного вывода подсказок.",
     "Reset" : "Сброс",
     "Unexpected server response" : "Неожиданный ответ сервера",
     "Result" : "Результат",
