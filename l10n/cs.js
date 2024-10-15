@@ -21,6 +21,8 @@ OC.L10N.register(
     "Failed to set notification: Unknown user" : "Nepodařilo se nastavit upozornění: neznámý uživatel",
     "Failed to set notification: Generation not found" : "Nepodařilo se nastavit upozornění: vytváření nenalezeno",
     "Failed to set notification: Unknown error" : "Nepodařilo se nastavit upozornění: neznámá chyba",
+    "A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability" : "Inteligentní výběr pro interakci s napojení na GPT, které poskytuje schopnost dotazování zdarma",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability." : "Sjednocený inteligentní výběr pro napojení Nextcloud na rozsáhlé jazykové modely, který poskytuje schopnost dotazování se zdarma.",
     "Text generation content" : "Obsah vytváření textu",
     "The text generation task was scheduled to run in the background." : "Úloha vytváření textu byla naplánována pro spuštění na pozadí.",
     "Estimated completion time: " : "Odhadovaná doba dokončení:",
