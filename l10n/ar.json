@@ -31,7 +31,7 @@
     "Copy text to clipboard" : "إنسَخ النص إلى الحافظة",
     "Reset" : "إعادة التعيين",
     "Include prompt" : "ضمِّن المُطالبة",
-    "Unexpected server response" : "استجابة غير متوقعة من الخادوم",
+    "Unexpected server response" : "استجابة غير متوقعة من الخادم",
     "This generation has been deleted." : "هذه التوليدة تمّ حذفها",
     "The processing of generations failed." : "معالجة التوليدات أخفقت.",
     "The processing of some generations failed." : "معالجة بعض التوليدات أخفقت.",
