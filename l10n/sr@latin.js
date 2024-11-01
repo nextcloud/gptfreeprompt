@@ -2,6 +2,7 @@ OC.L10N.register(
     "gptfreeprompt",
     {
     "Delete" : "Obriši",
+    "Failed" : "Nije uspelo",
     "Deleted" : "Obrisano",
     "Done" : "Gotovo"
 },
