@@ -12,6 +12,7 @@ OC.L10N.register(
     "Result" : "Risultato",
     "Advanced options" : "Opzioni avanzate",
     "Done" : "Completato",
-    "Preview" : "Anteprima"
+    "Preview" : "Anteprima",
+    "Text generation" : "Generazione di testo"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
