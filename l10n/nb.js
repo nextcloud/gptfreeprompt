@@ -41,7 +41,7 @@ OC.L10N.register(
     "Unknown text generation API error" : "Ukjent tekstgenerering API-feil",
     "Prompt" : "Spør",
     "Result" : "Resultat",
-    "Result {index}" : "Resultat {indeks}",
+    "Result {index}" : "Resultat {index}",
     "ERROR: No free prompt provider available" : "FEIL: Ingen gratis ledetekstleverandør tilgjengelig",
     "Show/hide advanced options" : "Vis/skjul avanserte alternativer",
     "Advanced options" : "Avanserte innstillinger",
