@@ -9,6 +9,7 @@ OC.L10N.register(
     "Deleted" : "Odstránené",
     "Unknown" : "Neznámy",
     "Reset" : "Resetovať",
+    "Prompt" : "Zadanie",
     "Result" : "Výsledok",
     "Advanced options" : "Pokročilé možnosti",
     "Done" : "Hotovo",
