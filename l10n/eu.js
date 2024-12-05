@@ -21,6 +21,7 @@ OC.L10N.register(
     "Some generations are still being processed in the background! Showing finished generations." : "Sorpen batzuk atzeko planoan prozesatzen ari dira oraindik! Bukatutako sorpenak erakusten.",
     "Loading generations…" : "Sorpenak kargatzen...",
     "Reset" : "Berrezarri",
+    "Include prompt" : "Sartu sarrera",
     "Unexpected server response" : "Ustekabeko zerbitzariaren erantzuna",
     "The processing of generations failed." : "Sorpenen prozesamenduak huts egin du.",
     "The processing of some generations failed." : "Sorpen batzuen prozesamenduak huts egin du.",
