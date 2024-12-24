@@ -9,6 +9,7 @@ OC.L10N.register(
     "Deleted" : "Вилучено",
     "Unknown" : "Невідомо",
     "Reset" : "Відхилити зміни",
+    "Prompt" : "Запрошення",
     "Result" : "Результат",
     "Advanced options" : "Розширені налаштування",
     "Done" : "Готово",
