@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Zobraziť",
     "Delete" : "Vymazať",
+    "AI text generation" : "Generovanie textu pomocou AI",
     "Success" : "Úspešné",
     "Failed" : "Zlyhalo",
     "Processing" : "Spracovávam",
