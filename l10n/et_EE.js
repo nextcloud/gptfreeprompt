@@ -1,6 +1,7 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Vaata",
     "Delete" : "Kustuta",
     "Processing" : "Töötlemine",
     "Deleted" : "Kustutatud",
