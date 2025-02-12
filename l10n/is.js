@@ -8,6 +8,7 @@ OC.L10N.register(
     "Deleted" : "Eytt",
     "Unknown" : "Óþekkt",
     "Reset" : "Endurstilla",
+    "Prompt" : "Kvaðning",
     "Result" : "Niðurstöður",
     "Advanced options" : "Ítarlegir valkostir",
     "Done" : "Lokið",
