@@ -11,6 +11,7 @@ OC.L10N.register(
     "Result" : "Resultat",
     "Advanced options" : "Avancerede indstillinger",
     "Done" : "Færdig",
-    "Preview" : "Forhåndsvisning"
+    "Preview" : "Forhåndsvisning",
+    "Text generation" : "Tekstgenerering"
 },
 "nplurals=2; plural=(n != 1);");
