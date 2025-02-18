@@ -9,6 +9,7 @@ OC.L10N.register(
     "Deleted" : "Suprimit",
     "Unknown" : "Desconegut",
     "Reset" : "Reinicialitza",
+    "Prompt" : "Indicador",
     "Result" : "Resultat",
     "Advanced options" : "Paràmetres avançats",
     "Done" : "Desat",
