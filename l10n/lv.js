@@ -7,7 +7,7 @@ OC.L10N.register(
     "Deleted" : "Dzēstie",
     "Unknown" : "Nezināms",
     "Reset" : "Atiestatīt",
-    "Advanced options" : "Papildu opcijas",
+    "Advanced options" : "Papildu iespējas",
     "Done" : "Pabeigts",
     "Preview" : "Priekšskatīt"
 },
