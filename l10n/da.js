@@ -8,6 +8,7 @@ OC.L10N.register(
     "Deleted" : "Slettet",
     "Unknown" : "Ukendt",
     "Reset" : "Nulstil",
+    "Prompt" : "Hurtig",
     "Result" : "Resultat",
     "Advanced options" : "Avancerede indstillinger",
     "Done" : "Færdig",
