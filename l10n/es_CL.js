@@ -6,9 +6,9 @@ OC.L10N.register(
     "Processing" : "Procesando",
     "Deleted" : "Borrado",
     "Unknown" : "Desconocido",
-    "Reset" : "Restablecer",
     "Result" : "Resultado",
-    "Advanced options" : "Opciones avanzadas",
-    "Preview" : "Previsualizar"
+    "Reset" : "Restablecer",
+    "Preview" : "Previsualizar",
+    "Advanced options" : "Opciones avanzadas"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

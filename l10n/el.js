@@ -8,11 +8,11 @@ OC.L10N.register(
     "Processing" : "Επεξεργασία",
     "Deleted" : "Διαγραμμένα",
     "Unknown" : "Άγνωστο",
-    "Reset" : "Επαναφορά",
     "Result" : "Αποτέλεσμα",
+    "Reset" : "Επαναφορά",
+    "Preview" : "Προεπισκόπηση",
     "Show/hide advanced options" : "Εμφάνιση/απόκρυψη προηγμένων επιλογών",
     "Advanced options" : "Επιλογές για προχωρημένους",
-    "Done" : "Ολοκληρώθηκε",
-    "Preview" : "Προεπισκόπηση"
+    "Done" : "Ολοκληρώθηκε"
 },
 "nplurals=2; plural=(n != 1);");

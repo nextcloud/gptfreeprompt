@@ -7,10 +7,10 @@ OC.L10N.register(
     "Processing" : "Processing",
     "Deleted" : "Deleted",
     "Unknown" : "Unknown",
-    "Reset" : "Reset",
     "Result" : "Result",
+    "Reset" : "Reset",
+    "Preview" : "Preview",
     "Advanced options" : "Advanced options",
-    "Done" : "Done",
-    "Preview" : "Preview"
+    "Done" : "Done"
 },
 "nplurals=2; plural=(n!=1);");

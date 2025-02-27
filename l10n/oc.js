@@ -9,7 +9,7 @@ OC.L10N.register(
     "Deleted" : "Suprimit",
     "Unknown" : "Desconegut",
     "Reset" : "Reïnicializar",
-    "Advanced options" : "Opcions avançadas",
-    "Preview" : "Apercebut"
+    "Preview" : "Apercebut",
+    "Advanced options" : "Opcions avançadas"
 },
 "nplurals=2; plural=(n > 1);");

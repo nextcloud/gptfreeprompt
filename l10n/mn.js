@@ -5,7 +5,7 @@ OC.L10N.register(
     "Deleted" : "Устгагдсан",
     "Unknown" : "Үл танигдах зүйл",
     "Reset" : "тохируулах",
-    "Advanced options" : "Бусад сонголтууд",
-    "Preview" : "шалгах"
+    "Preview" : "шалгах",
+    "Advanced options" : "Бусад сонголтууд"
 },
 "nplurals=2; plural=(n != 1);");

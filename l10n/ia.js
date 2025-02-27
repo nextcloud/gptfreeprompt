@@ -6,8 +6,8 @@ OC.L10N.register(
     "Deleted" : "Delite",
     "Unknown" : "Incognite",
     "Reset" : "Re-fixar",
+    "Preview" : "Previsualisar",
     "Advanced options" : "Optiones avantiate",
-    "Done" : "Preste",
-    "Preview" : "Previsualisar"
+    "Done" : "Preste"
 },
 "nplurals=2; plural=(n != 1);");

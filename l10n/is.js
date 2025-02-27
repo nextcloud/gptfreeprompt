@@ -7,11 +7,11 @@ OC.L10N.register(
     "Processing" : "Í vinnslu",
     "Deleted" : "Eytt",
     "Unknown" : "Óþekkt",
-    "Reset" : "Endurstilla",
     "Prompt" : "Kvaðning",
     "Result" : "Niðurstöður",
+    "Reset" : "Endurstilla",
+    "Preview" : "Forskoðun",
     "Advanced options" : "Ítarlegir valkostir",
-    "Done" : "Lokið",
-    "Preview" : "Forskoðun"
+    "Done" : "Lokið"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

@@ -8,11 +8,11 @@ OC.L10N.register(
     "Processing" : "S'està processant",
     "Deleted" : "Suprimit",
     "Unknown" : "Desconegut",
-    "Reset" : "Reinicialitza",
     "Prompt" : "Indicador",
     "Result" : "Resultat",
+    "Reset" : "Reinicialitza",
+    "Preview" : "Previsualitza",
     "Advanced options" : "Paràmetres avançats",
-    "Done" : "Desat",
-    "Preview" : "Previsualitza"
+    "Done" : "Desat"
 },
 "nplurals=2; plural=(n != 1);");

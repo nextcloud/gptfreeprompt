@@ -7,10 +7,10 @@ OC.L10N.register(
     "Processing" : "מתבצע עיבוד",
     "Deleted" : "נמחק",
     "Unknown" : "לא ידוע",
-    "Reset" : "איפוס",
     "Result" : "תוצאה",
+    "Reset" : "איפוס",
+    "Preview" : "תצוגה מקדימה",
     "Advanced options" : "אפשרויות מתקדמות",
-    "Done" : "הסתיים",
-    "Preview" : "תצוגה מקדימה"
+    "Done" : "הסתיים"
 },
 "nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;");

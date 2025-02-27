@@ -6,8 +6,8 @@ OC.L10N.register(
     "Deleted" : "Forigita",
     "Unknown" : "Nekonata",
     "Reset" : "Restarigi",
+    "Preview" : "Antaŭvidi",
     "Advanced options" : "Detalaj agordoj",
-    "Done" : "Farita",
-    "Preview" : "Antaŭvidi"
+    "Done" : "Farita"
 },
 "nplurals=2; plural=(n != 1);");

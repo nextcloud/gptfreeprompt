@@ -7,8 +7,8 @@ OC.L10N.register(
     "Processing" : "Elaborende",
     "Deleted" : "Cantzelladu",
     "Unknown" : "Disconnotu",
-    "Reset" : "Riprìstinu",
     "Result" : "Resurtadu",
+    "Reset" : "Riprìstinu",
     "Advanced options" : "Sèberos avantzados"
 },
 "nplurals=2; plural=(n != 1);");

@@ -8,10 +8,10 @@ OC.L10N.register(
     "Processing" : "Verwerken",
     "Deleted" : "Verwijderd",
     "Unknown" : "Onbekend",
-    "Reset" : "Herstellen",
     "Result" : "Resultaat",
+    "Reset" : "Herstellen",
+    "Preview" : "Voorbeeld",
     "Advanced options" : "Geavanceerde opties",
-    "Done" : "Klaar",
-    "Preview" : "Voorbeeld"
+    "Done" : "Klaar"
 },
 "nplurals=2; plural=(n != 1);");

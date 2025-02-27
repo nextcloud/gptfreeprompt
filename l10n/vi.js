@@ -7,8 +7,8 @@ OC.L10N.register(
     "Deleted" : "Đã xoá",
     "Unknown" : "Không xác định",
     "Reset" : "Đặt lại",
+    "Preview" : "Xem trước",
     "Advanced options" : "Tùy chọn nâng cao",
-    "Done" : "Hoàn thành",
-    "Preview" : "Xem trước"
+    "Done" : "Hoàn thành"
 },
 "nplurals=1; plural=0;");

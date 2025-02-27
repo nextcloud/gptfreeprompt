@@ -8,15 +8,15 @@ OC.L10N.register(
     "Processing" : "Käsitellään",
     "Deleted" : "Poistettu",
     "Unknown" : "Tuntematon",
+    "Prompt" : "Kehote",
+    "Result" : "Tulos",
     "This can take a while…" : "Tämä saattaa kestää hetken…",
     "Copy text to clipboard" : "Kopioi teksti leikepöydälle",
     "Reset" : "Palauta",
-    "Prompt" : "Kehote",
-    "Result" : "Tulos",
+    "Preview" : "Esikatselu",
     "Show/hide advanced options" : "Näytä/piilota lisäasetukset",
     "Advanced options" : "Lisävalinnat",
     "Notify when ready" : "Ilmoita kun valmis",
-    "Done" : "Valmis",
-    "Preview" : "Esikatselu"
+    "Done" : "Valmis"
 },
 "nplurals=2; plural=(n != 1);");

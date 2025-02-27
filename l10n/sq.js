@@ -6,10 +6,10 @@ OC.L10N.register(
     "Processing" : "Në përpunim",
     "Deleted" : "E fshirë",
     "Unknown" : "I panjohur",
-    "Reset" : "Rivendos",
     "Result" : "Rezultatet",
+    "Reset" : "Rivendos",
+    "Preview" : "Parapamje ",
     "Advanced options" : "Opsione të avancuara",
-    "Done" : "U bë",
-    "Preview" : "Parapamje "
+    "Done" : "U bë"
 },
 "nplurals=2; plural=(n != 1);");

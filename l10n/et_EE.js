@@ -7,8 +7,8 @@ OC.L10N.register(
     "Deleted" : "Kustutatud",
     "Unknown" : "Teadmata",
     "Reset" : "Lähtesta",
+    "Preview" : "Eelvaade",
     "Advanced options" : "Täpsemad valikud",
-    "Done" : "Valmis",
-    "Preview" : "Eelvaade"
+    "Done" : "Valmis"
 },
 "nplurals=2; plural=(n != 1);");

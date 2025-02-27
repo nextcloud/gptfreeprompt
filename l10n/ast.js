@@ -11,17 +11,17 @@ OC.L10N.register(
     "Deleted" : "Desanicióse",
     "Unknown" : "Desconocí­u",
     "Generation not found" : "Nun s'atopó la xeneración",
-    "This can take a while…" : "Esta aición pue tardar un poco…",
-    "Loading generations…" : "Cargando les xeneraciones…",
-    "Reset" : "Reafitar",
     "Unexpected server response" : "Recibióse una rempuesta inesperada del sirvidor",
     "The processing of generations failed." : "El procesamientu de les xeneraciones falló.",
     "The processing of some generations failed." : "El procesamientu de dalgunes xeneraciones falló.",
     "Result" : "Resultáu",
+    "This can take a while…" : "Esta aición pue tardar un poco…",
+    "Loading generations…" : "Cargando les xeneraciones…",
+    "Reset" : "Reafitar",
+    "Regenerate" : "Rexenerar",
+    "Preview" : "Previsualizar",
     "Show/hide advanced options" : "Amosar/esconder les opciones avanzaes",
     "Advanced options" : "Opciones avanzaes",
-    "Done" : "Fecho",
-    "Regenerate" : "Rexenerar",
-    "Preview" : "Previsualizar"
+    "Done" : "Fecho"
 },
 "nplurals=2; plural=(n != 1);");

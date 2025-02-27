@@ -6,7 +6,7 @@ OC.L10N.register(
     "Deleted" : "ลบแล้ว",
     "Unknown" : "ไม่ทราบ",
     "Reset" : "รีเซ็ต",
-    "Advanced options" : "ตัวเลือกขั้นสูง",
-    "Preview" : "ตัวอย่าง"
+    "Preview" : "ตัวอย่าง",
+    "Advanced options" : "ตัวเลือกขั้นสูง"
 },
 "nplurals=1; plural=0;");

@@ -8,8 +8,8 @@ OC.L10N.register(
     "Deleted" : "Dihapus",
     "Unknown" : "Tidak diketahui",
     "Reset" : "Setel ulang",
+    "Preview" : "Pratinjau",
     "Advanced options" : "Opsi lanjutan",
-    "Done" : "Selesai",
-    "Preview" : "Pratinjau"
+    "Done" : "Selesai"
 },
 "nplurals=1; plural=0;");

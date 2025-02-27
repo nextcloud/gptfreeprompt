@@ -7,12 +7,12 @@ OC.L10N.register(
     "Processing" : "Bearbejder",
     "Deleted" : "Slettet",
     "Unknown" : "Ukendt",
-    "Reset" : "Nulstil",
     "Prompt" : "Prompt",
     "Result" : "Resultat",
+    "Reset" : "Nulstil",
+    "Preview" : "Forhåndsvisning",
     "Advanced options" : "Avancerede indstillinger",
     "Done" : "Færdig",
-    "Preview" : "Forhåndsvisning",
     "Text generation" : "Tekstgenerering"
 },
 "nplurals=2; plural=(n != 1);");
