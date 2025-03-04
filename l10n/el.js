@@ -13,6 +13,7 @@ OC.L10N.register(
     "Preview" : "Προεπισκόπηση",
     "Show/hide advanced options" : "Εμφάνιση/απόκρυψη προηγμένων επιλογών",
     "Advanced options" : "Επιλογές για προχωρημένους",
-    "Done" : "Ολοκληρώθηκε"
+    "Done" : "Ολοκληρώθηκε",
+    "Text generation" : "Δημιουργία κειμένου"
 },
 "nplurals=2; plural=(n != 1);");
