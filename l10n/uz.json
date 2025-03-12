@@ -1,6 +1,9 @@
 { "translations": {
     "Delete" : "Delete",
     "Success" : "Success",
+    "Deleted" : "O`chirilgan",
+    "Unknown" : "Noma'lum",
+    "Preview" : "Ko‘rib chiqish",
     "Done" : "Done"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
