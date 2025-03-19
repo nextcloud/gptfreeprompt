@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Vis",
     "Delete" : "Slet",
+    "AI text generation" : "AI tekstgenerering",
     "Failed" : "Mislykkede",
     "Processing" : "Bearbejder",
     "Deleted" : "Slettet",
