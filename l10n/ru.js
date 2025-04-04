@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Режим просмотра",
     "Delete" : "Удалить",
+    "AI text generation" : "ИИ генерация текста",
     "Success" : "Выполнено",
     "Failed" : "Не удалось",
     "Processing" : "Обрабатывется",
