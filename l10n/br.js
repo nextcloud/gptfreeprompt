@@ -2,9 +2,9 @@ OC.L10N.register(
     "gptfreeprompt",
     {
     "View" : "Gwell",
-    "Delete" : "Lemel",
+    "Delete" : "Dilemel",
     "Failed" : "C'hwitet",
-    "Deleted" : "Lamet",
+    "Deleted" : "Dilamet",
     "Unknown" : "Dianv",
     "Preview" : "Ragwell",
     "Done" : "Graet"
