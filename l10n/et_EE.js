@@ -7,6 +7,8 @@ OC.L10N.register(
     "Processing" : "Töötlemine",
     "Deleted" : "Kustutatud",
     "Unknown" : "Teadmata",
+    "Prompt" : "Sisendvorm",
+    "Result" : "Tulemus",
     "Reset" : "Lähtesta",
     "Preview" : "Eelvaade",
     "Advanced options" : "Täpsemad valikud",
