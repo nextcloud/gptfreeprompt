@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Vaata",
     "Delete" : "Kustuta",
+    "Success" : "Valmis",
     "Failed" : "Ebaõnnestus",
     "Processing" : "Töötlemine",
     "Deleted" : "Kustutatud",
