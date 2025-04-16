@@ -2,7 +2,7 @@ OC.L10N.register(
     "gptfreeprompt",
     {
     "View" : "Skats",
-    "Delete" : "Dzēst",
+    "Delete" : "Izdzēst",
     "Failed" : "Neizdevās",
     "Deleted" : "Izdzēsts",
     "Unknown" : "Nezināms",
