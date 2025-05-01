@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Vaata",
     "Delete" : "Kustuta",
+    "AI text generation" : "Teksti koostamine tehisaru abil",
     "Success" : "Valmis",
     "Failed" : "Ebaõnnestus",
     "Processing" : "Töötlemine",
