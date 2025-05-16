@@ -24,7 +24,9 @@ OC.L10N.register(
     "Preview" : "Eelvaade",
     "Notify when ready error" : "Viga ülesande täitmisest teavitamisel",
     "Unknown notify when ready error" : "Tundmatu viga ülesande täitmisest teavitamisel",
+    "Show/hide advanced options" : "Näita täiendavaid valikuid või peida nad",
     "Advanced options" : "Täpsemad valikud",
+    "Notify when ready" : "Teavita valmissaamisest",
     "Done" : "Valmis"
 },
 "nplurals=2; plural=(n != 1);");
