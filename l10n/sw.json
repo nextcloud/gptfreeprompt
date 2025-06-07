@@ -1,6 +1,8 @@
 { "translations": {
     "Delete" : "Futa",
     "Deleted" : "Vilivyofutwa",
-    "Preview" : "Mwonekano wa awali"
+    "Unknown" : "Haijulikani",
+    "Preview" : "Mwonekano wa awali",
+    "Done" : "Imefanyika"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

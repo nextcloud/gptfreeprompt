@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Delete" : "Futa",
     "Deleted" : "Vilivyofutwa",
-    "Preview" : "Mwonekano wa awali"
+    "Unknown" : "Haijulikani",
+    "Preview" : "Mwonekano wa awali",
+    "Done" : "Imefanyika"
 },
 "nplurals=2; plural=(n != 1);");
