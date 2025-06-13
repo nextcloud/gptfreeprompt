@@ -4,6 +4,7 @@ OC.L10N.register(
     "Text generation ready" : "Gotowe do generowania tekstu",
     "View" : "Podgląd",
     "Delete" : "Usuń",
+    "AI text generation" : "Generowanie tekstu przez AI",
     "Success" : "Powiodło się",
     "Failed" : "Nie powiodło się",
     "Processing" : "Przetwarzanie",
