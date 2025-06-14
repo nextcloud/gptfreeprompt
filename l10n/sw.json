@@ -1,8 +1,10 @@
 { "translations": {
+    "View" : "Angalia",
     "Delete" : "Futa",
     "Deleted" : "Vilivyofutwa",
     "Unknown" : "Haijulikani",
     "Preview" : "Mwonekano wa awali",
+    "Advanced options" : "Chaguzi za juu",
     "Done" : "Imefanyika"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
