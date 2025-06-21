@@ -48,7 +48,7 @@ OC.L10N.register(
     "You will be notified when the text generation is ready." : "Du wirst benachrichtigt, wenn die Texterstellung abgeschlossen ist.",
     "Notify when ready error" : "Fehler bei der Fertigstellungsbenachrichtigung",
     "Unknown notify when ready error" : "Unbekannter Fehler für \"Benachrichtigung bei Bereitschaft\"",
-    "ERROR: No free prompt provider available" : "FEHLER: Kein kostenloser Eingabe-Anbieter verfügbar",
+    "ERROR: No free prompt provider available" : "FEHLER: Kein kostenloser Prompt-Anbieter verfügbar",
     "Show/hide advanced options" : "Erweiterte Optionen anzeigen/ausblenden",
     "Advanced options" : "Erweiterte Optionen",
     "Preview text generation by AI" : "Vorschau der Texterstellung durch KI",
