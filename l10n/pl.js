@@ -10,6 +10,7 @@ OC.L10N.register(
     "Processing" : "Przetwarzanie",
     "Deleted" : "Usunięto",
     "Unknown" : "Nieznany",
+    "Prompt" : "Polecenie",
     "Result" : "Wynik",
     "Copy text to clipboard" : "Skopiuj tekst do schowka",
     "Reset" : "Resetuj",
