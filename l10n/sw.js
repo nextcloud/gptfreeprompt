@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Angalia",
     "Delete" : "Futa",
+    "Failed" : "Imeshindwa",
     "Deleted" : "Vilivyofutwa",
     "Unknown" : "Haijulikani",
     "Reset" : "Pangilia upya",
