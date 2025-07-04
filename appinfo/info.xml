@@ -7,11 +7,11 @@
     -->
     <id>gptfreeprompt</id>
     <name>GptFreePrompt</name>
-    <summary>A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability</summary>
-    <description><![CDATA[A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability.]]></description>
+    <summary>A Smart Picker for interfacing with the GPT integrations that provide free prompt capability</summary>
+    <description><![CDATA[A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability.]]></description>
     <version>1.0.2</version>
     <licence>agpl</licence>
-    <author mail="sami.finnila@nextcloud.com" >Sami Finnilä</author>
+    <author mail="sami.finnila@nextcloud.com">Sami Finnilä</author>
     <namespace>GptFreePrompt</namespace>
     <category>integration</category>
     <website>https://github.com/nextcloud/gptfreeprompt</website>
