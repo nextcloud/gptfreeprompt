@@ -22,8 +22,6 @@ OC.L10N.register(
     "Failed to set notification: Generation not found" : "Nepodarilo sa nastaviť upozornenie: Generovanie výstupu nebolo nájdené",
     "Failed to set notification: Unknown error" : "Nepodarilo sa nastaviť upozornenie: Neznáma chyba",
     "GptFreePrompt" : "GptFreePrompt",
-    "A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability" : "Smart Picker pre prepojenie s integráciami GPT, ktoré poskytujú bezplatné generovanie výstupu",
-    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability." : "Zjednotený Smart Picker pre integrácie veľkých jazykových modelov do Nextcloud, ktoré poskytujú bezplatnú možnosť generovania výstupu.",
     "Unexpected server response" : "Neočakávaná odpoveď servera",
     "This generation has been deleted." : "Toto generovanie výstupu bolo vymazané.",
     "The processing of generations failed." : "Spracovávanie generovania výstupu zlyhalo.",

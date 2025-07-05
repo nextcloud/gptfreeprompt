@@ -9,8 +9,6 @@
     "Unknown" : "Неизвестно",
     "Failed to set notification: Unknown user" : "Не удалось установить уведомление: Неизвестный пользователь",
     "Failed to set notification: Unknown error" : "Не удалось установить уведомление: Неизвестная ошибка",
-    "A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability" : "Умный селектор для взаимодействия с интеграциями GPT, которые предоставляют возможность бесплатных подсказок",
-    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability." : "Унифицированный интеллектуальный выбор для интеграции большой языковой модели Nextcloud, обеспечивающий возможность свободного вывода подсказок.",
     "Unexpected server response" : "Неожиданный ответ сервера",
     "Prompt" : "Подсказка",
     "Result" : "Результат",

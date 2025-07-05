@@ -22,8 +22,6 @@ OC.L10N.register(
     "Failed to set notification: Generation not found" : "فشل في وضع إشعار: عملية التوليد غير موجودة",
     "Failed to set notification: Unknown error" : "تعذّر وضع الإشعار: خطأ غير محدد",
     "GptFreePrompt" : "GptFreePrompt",
-    "A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability" : "لاقط ذكي للتواصل مع عمليات تكامل GPT التي توفر إمكانية مجانية للطلب",
-    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability." : "لاقط ذكي موحد لتكاملات النماذج اللغوية الضخمة مع نكست كلاود و التي توفر الإمكانية المجانية للطلب.",
     "Unexpected server response" : "استجابة غير متوقعة من الخادم",
     "This generation has been deleted." : "عملية التوليد هذه تمّ حذفها",
     "The processing of generations failed." : "معالجة التوليدات أخفقت.",

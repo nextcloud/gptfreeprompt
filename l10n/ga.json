@@ -20,8 +20,6 @@
     "Failed to set notification: Generation not found" : "Theip ar fhógra a shocrú: níor aimsíodh an ghiniúint",
     "Failed to set notification: Unknown error" : "Theip ar an bhfógra a shocrú: Earráid anaithnid",
     "GptFreePrompt" : "GptFreePrompt",
-    "A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability" : "Piocálaí Cliste chun comhéadan a dhéanamh leis na comhtháthú GPT a sholáthraíonn cumas pras saor in aisce",
-    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability." : "Roghnóir cliste aontaithe le haghaidh comhtháthú samhlacha teanga móra Nextcloud a sholáthraíonn cabability leideanna saor in aisce.",
     "Unexpected server response" : "Freagra freastalaí gan choinne",
     "This generation has been deleted." : "Tá an ghlúin seo scriosta.",
     "The processing of generations failed." : "Theip ar phróiseáil na glúnta.",

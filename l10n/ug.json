@@ -20,8 +20,6 @@
     "Failed to set notification: Generation not found" : "ئۇقتۇرۇشنى مەغلۇب قىلدى: ئەۋلاد تېپىلمىدى",
     "Failed to set notification: Unknown error" : "ئۇقتۇرۇش بەلگىلەش مەغلۇب بولدى: نامەلۇم خاتالىق",
     "GptFreePrompt" : "GptFreePrompt",
-    "A Smart Picker for interfacing with the GPT integrations that provide free prompt cabability" : "ھەقسىز تېز سۈرئەتلىك ئىقتىدار بىلەن تەمىنلەيدىغان GPT توپلاشتۇرۇلغان ئۆز-ئارا تەسىر كۆرسىتىدىغان ئەقلىي ئىقتىدارلىق تاللىغۇچ",
-    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting cabability." : "Nextcloud چوڭ تىل مودېلى بىر گەۋدىلەشتۈرۈلگەن ئەقلىي ئىقتىدارلىق تاللىغۇچ ھەقسىز تېز قوزغىتىش ئىقتىدارى بىلەن تەمىنلەيدۇ.",
     "Unexpected server response" : "كۈتۈلمىگەن مۇلازىمېتىر ئىنكاسى",
     "This generation has been deleted." : "بۇ بىر ئەۋلاد ئۆچۈرۈلدى.",
     "The processing of generations failed." : "ئەۋلادلارنى بىر تەرەپ قىلىش مەغلۇب بولدى.",
