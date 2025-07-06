@@ -20,6 +20,8 @@
     "Failed to set notification: Generation not found" : "Failed to set notification: Generation not found",
     "Failed to set notification: Unknown error" : "Failed to set notification: Unknown error",
     "GptFreePrompt" : "GptFreePrompt",
+    "A Smart Picker for interfacing with the GPT integrations that provide free prompt capability" : "A Smart Picker for interfacing with the GPT integrations that provide free prompt capability",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability." : "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability.",
     "Unexpected server response" : "Unexpected server response",
     "This generation has been deleted." : "This generation has been deleted.",
     "The processing of generations failed." : "The processing of generations failed.",

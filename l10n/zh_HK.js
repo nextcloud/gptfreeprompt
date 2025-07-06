@@ -22,6 +22,8 @@ OC.L10N.register(
     "Failed to set notification: Generation not found" : "設定通知失敗：找不到產生",
     "Failed to set notification: Unknown error" : "設定通知失敗：錯誤不詳",
     "GptFreePrompt" : "GptFreePrompt",
+    "A Smart Picker for interfacing with the GPT integrations that provide free prompt capability" : "用於與 GPT 整合互動的智慧型挑選程式，提供免費的提示功能",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability." : "Nextcloud 大型語言模型整合的統一智慧型挑選程式，提供免費的提示功能。",
     "Unexpected server response" : "未預期的伺服器回應",
     "This generation has been deleted." : "此產生已被刪除。",
     "The processing of generations failed." : "產生處理失敗。",

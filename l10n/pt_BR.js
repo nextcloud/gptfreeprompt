@@ -22,6 +22,8 @@ OC.L10N.register(
     "Failed to set notification: Generation not found" : "Falha ao definir notificação: Geração não encontrada",
     "Failed to set notification: Unknown error" : "Falha ao definir notificação: Erro desconhecido",
     "GptFreePrompt" : "GptFreePrompt",
+    "A Smart Picker for interfacing with the GPT integrations that provide free prompt capability" : "Um Seletor Inteligente para fazer a interface com as integrações GPT que fornecem o recurso de prompt livre",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability." : "Um Seletor Inteligente unificado para integrações de modelos de linguagem de grande escala do Nextcloud que fornecem o recurso de prompt livre.",
     "Unexpected server response" : "Resposta inesperada do servidor",
     "This generation has been deleted." : "Esta geração foi excluída.",
     "The processing of generations failed." : "O processamento de gerações falhou.",

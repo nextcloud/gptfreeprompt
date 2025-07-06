@@ -11,6 +11,8 @@
     "Deleted" : "Kustutatud",
     "Unknown" : "Teadmata",
     "Generation not found" : "Loodud tulemust ei leidu",
+    "Failed to set notification: Unknown user" : "Teavitamine polnud võimalik: tundmatu kasutaja",
+    "Failed to set notification: Unknown error" : "Teavitamine polnud võimalik: tundmatu viga",
     "Unexpected server response" : "Ootamatu vastus serverist",
     "The processing of generations failed." : "Loomete töötlemine ei õnnestunud.",
     "The processing of some generations failed." : "Mõnede loomete töötlemine ei õnnestunud.",

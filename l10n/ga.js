@@ -22,6 +22,8 @@ OC.L10N.register(
     "Failed to set notification: Generation not found" : "Theip ar fhógra a shocrú: níor aimsíodh an ghiniúint",
     "Failed to set notification: Unknown error" : "Theip ar an bhfógra a shocrú: Earráid anaithnid",
     "GptFreePrompt" : "GptFreePrompt",
+    "A Smart Picker for interfacing with the GPT integrations that provide free prompt capability" : "Roghnóir Cliste le haghaidh comhéadan leis na comhtháthúcháin GPT a sholáthraíonn cumas pras saor in aisce",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability." : "Roghnóir Cliste aontaithe le haghaidh comhtháthú samhail teanga mhór Nextcloud a sholáthraíonn cumas leideanna saor in aisce.",
     "Unexpected server response" : "Freagra freastalaí gan choinne",
     "This generation has been deleted." : "Tá an ghlúin seo scriosta.",
     "The processing of generations failed." : "Theip ar phróiseáil na glúnta.",
