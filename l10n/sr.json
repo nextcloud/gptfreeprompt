@@ -20,6 +20,8 @@
     "Failed to set notification: Generation not found" : "Није успело постављање обавештења: није пронађено генерисање",
     "Failed to set notification: Unknown error" : "Није успело постављање обавештења: непозната грешка",
     "GptFreePrompt" : "GptFreePrompt",
+    "A Smart Picker for interfacing with the GPT integrations that provide free prompt capability" : "Паметни бирач за интеракцију са GPT интеграцијама које обезбеђују бесплатну услугу пријема захтева",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability." : "Објединњени Паметни бирач за Nextcloud интеграције великог језичког модела који обезбеђује могућност бесплатног слања захтева.",
     "Unexpected server response" : "Неочекивани одговор сервера",
     "This generation has been deleted." : "Ово генерисање је обрисано.",
     "The processing of generations failed." : "Није успео процес генерисања.",

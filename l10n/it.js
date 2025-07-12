@@ -8,6 +8,7 @@ OC.L10N.register(
     "Processing" : "Elaborazione",
     "Deleted" : "Eliminato",
     "Unknown" : "Sconosciuto",
+    "Prompt" : "Prompt",
     "Result" : "Risultato",
     "Reset" : "Ripristina",
     "Preview" : "Anteprima",
