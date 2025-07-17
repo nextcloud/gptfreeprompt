@@ -20,6 +20,7 @@
     "Failed to set notification: Generation not found" : "Produciuse un fallo ao definir unha notificación: non se atopou a xeración",
     "Failed to set notification: Unknown error" : "Produciuse un fallo ao definir unha notificación: erro descoñecido",
     "GptFreePrompt" : "Indicador GptFree",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability." : "Un selector intelixente unificado para integracións de modelos de linguaxe a grande escala de Nextcloud que fornezan a posibilidade de indicación libre.",
     "Unexpected server response" : "Resposta non agardada do servidor",
     "This generation has been deleted." : "Esta xeración foi eliminada.",
     "The processing of generations failed." : "O procesamento das xeracións fracasou.",
