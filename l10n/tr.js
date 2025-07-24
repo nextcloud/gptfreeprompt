@@ -22,6 +22,8 @@ OC.L10N.register(
     "Failed to set notification: Generation not found" : "Bildirim ayarlanamadı: Oluşturma bulunamadı",
     "Failed to set notification: Unknown error" : "Bildirim ayarlanamadı: Bilinmeyen bir sorun çıktı",
     "GptFreePrompt" : "GptFreePrompt",
+    "A Smart Picker for interfacing with the GPT integrations that provide free prompt capability" : "Ücretsiz soru sormayı sağlayan GPT bütünleştirme arayüzü için bir akıllı seçici",
+    "A unified Smart Picker for Nextcloud large language model integrations that provide free prompting capability." : "Ücretsiz soru sormayı sağlayan Nextcloud büyük dil modeli bütünleştirmeleri için birleşik bir akıllı seçici.",
     "Unexpected server response" : "Beklenmeyen bir sunucu yanıtı alındı",
     "This generation has been deleted." : "Bu oluşturma silindi.",
     "The processing of generations failed." : "Oluşturmalar işlenemedi.",
