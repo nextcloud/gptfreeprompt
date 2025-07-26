@@ -2,6 +2,7 @@ OC.L10N.register(
     "gptfreeprompt",
     {
     "Delete" : "Выдаліць",
+    "Deleted" : "Выдалены",
     "Unknown" : "Невядомы",
     "Reset" : "Скінуць",
     "Done" : "Гатова"
