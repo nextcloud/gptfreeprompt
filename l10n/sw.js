@@ -9,6 +9,7 @@ OC.L10N.register(
     "Reset" : "Pangilia upya",
     "Preview" : "Mwonekano wa awali",
     "Advanced options" : "Chaguzi za juu",
-    "Done" : "Imefanyika"
+    "Done" : "Imefanyika",
+    "Text generation" : "Text generation"
 },
 "nplurals=2; plural=(n != 1);");
