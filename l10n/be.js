@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Выдаліць",
     "Deleted" : "Выдалены",
     "Unknown" : "Невядомы",
+    "Result" : "Вынік",
     "Reset" : "Скінуць",
     "Done" : "Гатова"
 },
