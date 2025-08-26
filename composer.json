@@ -19,7 +19,7 @@
 	},
     "require-dev": {
         "nextcloud/coding-standard": "^1.1",
-        "phpunit/phpunit": "^9.0.0",
+        "phpunit/phpunit": "^11.5.1",
         "nextcloud/ocp": "dev-master",
         "symfony/console": "^6.4",
         "psalm/phar": "^5.16"
