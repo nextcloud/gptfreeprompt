@@ -1,6 +1,7 @@
 OC.L10N.register(
     "gptfreeprompt",
     {
+    "View" : "Выгляд",
     "Delete" : "Выдаліць",
     "Deleted" : "Выдалены",
     "Unknown" : "Невядомы",
