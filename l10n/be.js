@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "View" : "Выгляд",
     "Delete" : "Выдаліць",
+    "Failed" : "Не ўдалося",
     "Deleted" : "Выдалены",
     "Unknown" : "Невядомы",
     "Result" : "Вынік",
