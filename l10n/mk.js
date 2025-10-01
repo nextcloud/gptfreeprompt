@@ -8,6 +8,7 @@ OC.L10N.register(
     "Processing" : "Обработка",
     "Deleted" : "Избришани",
     "Unknown" : "Непознат",
+    "Result" : "Резултат",
     "Reset" : "Ресетирање",
     "Advanced options" : "Напредни опции",
     "Done" : "Готово"
