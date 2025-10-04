@@ -9,6 +9,7 @@ OC.L10N.register(
     "Processing" : "Verwerken",
     "Deleted" : "Verwijderd",
     "Unknown" : "Onbekend",
+    "Prompt" : "Prompt",
     "Result" : "Resultaat",
     "Reset" : "Herstellen",
     "Preview" : "Voorbeeld",
